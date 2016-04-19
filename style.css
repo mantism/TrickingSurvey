@@ -1,0 +1,63 @@
+body {
+      position: relative;
+}
+
+h1,h2,h3,h4,h5,h6 {
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 400;
+}
+
+h1 {
+      font-size: 4em;
+}
+
+ul.side-nav {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 20px;
+      font-weight: 100;
+      width: 100%;
+      top: 50px;
+      color: #e89d0a;
+
+}
+
+p {
+      font-size: 24px;
+      font-weight: 200;
+}
+
+
+li.active {
+      font-weight: bold;
+}
+
+section {
+  height: 500px;
+}
+
+video {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      min-width: 75%;
+      min-height: 75%;
+      width: 100%;
+      height: 100%;
+      z-index: -100;
+      transform: translateX(-50%);
+      background: url('/res/helvetic_poster.png') no-repeat;
+      background-size: cover;
+      transition: 1s opacity;
+      font-size: 0px;
+}
+
+@media screen and (max-width: 810px) {
+  #section1, #section2, #section3, #section4, #section5 , #section6, #section7, #section8, #section9, #section10{
+      margin-left: 150px;
+  }
+}
+#titlesection {
+      /*height: 750px;*/
+      padding-top: 300px;
+      position: absolute;
+}

@@ -10,98 +10,111 @@
       <script src="//d3js.org/d3.v3.min.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="style.css">
+      <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 </head>
 
-<body data-spy="scroll" data-target="#MyScrollSpy" data-offset="15">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
       <div class="container-fluid">
             <div class="row">
-                  <div class="col-sm-6 col-sm-push-3 text-center" id = "title section">
-                        <h1>Tricking Data</h1>
-                        <h3>Visualization of data on the tricking community <a href=""> * </a> </h3>
+                  <div class="col-sm-6 col-sm-push-3 text-center" id = "titlesection">
+                        <h1 style="color:white">The Tricking Wiki</h1>
+                        <h3 style="color:white"> Visualization of data on the tricking community <a href="#section10"> * </a> </h3>
+                        <p style="color:white">
+                              <a href="https://www.youtube.com/watch?v=NibkHJt2TV4">video source </a>
+                        </p>
                   </div>
+
+
             </div>
 
+      </div>
+      <video autoplay poster="res/helvetic_poster.png" id = "bgvid" loop muted>
+            <source src="res/helvetictricking.webm" type="video/webm" >
+            <source src="res/helvetictricking.mp4" type="video/mp4" >
+      </video>
+      <br />
 
-            <div class="container-fluid">
-                  <div class="row">
-                        <div class="col-sm-2" id="myScrollspy">
-                              <ul class="side-nav nav" data-spy="affix" data-offset-top="875">
-                                    <li><a href="#section1">What is tricking?</a></li>
-                                    <li><a href="#section2">Tricking Timeline</a></li>
-                                    <li><a href="#section3">Tricking + the Internet</a></li>
-                                    <li><a href="#section4">World Map</a></li>
-                                    <li><a href="#section5">Tricker's Origins</a></li>
-                                    <li><a href="#section6">Training</a></li>
-                                    <li><a href="#section7">Gender Gap</a></li>
-                                    <li><a href="#section8">Popular Tricks</a></li>
-                                    <li><a href="#section9">Popular Videos</a></li>
-                                    <li><a href="#section10">About</a></li>
-                              </ul>
-                        </div>
-                        <div class="col-sm-10 content">
-                              <section id="section1">
-                                    <h1>What is Tricking?</h1>
-                                    <p>
-                                          
-                                    </p>
-                              </section>
-                              <section id="section2">
-                                    <h1>Tricking Timeline</h1>
-                                    <p>
+      <div class="container-fluid">
+            <div class="row">
+                  <div class="col-sm-2" id="myScrollspy">
+                        <ul class="side-nav nav" data-spy="affix" data-offset-top="750">
+                              <li><a href="#section1">What is tricking?</a></li>
+                              <li><a href="#section2">Tricking Timeline</a></li>
+                              <li><a href="#section3">Tricking + the Internet</a></li>
+                              <li><a href="#section4">World Map</a></li>
+                              <li><a href="#section5">Tricker's Origins</a></li>
+                              <li><a href="#section6">Training</a></li>
+                              <li><a href="#section7">Gender Gap</a></li>
+                              <li><a href="#section8">Popular Tricks</a></li>
+                              <li><a href="#section9">Popular Videos</a></li>
+                              <li><a href="#section10">About</a></li>
+                        </ul>
+                  </div>
+                  <div class="col-sm-10 content">
+                        <section id="section1">
+                              <h2>What is Tricking?</h2>
+                              <p>
+                                    <span style="font-style:italic"> "Martial arts tricking, known simply as tricking, is a training discipline that combines martial arts kicks with flips and twists from gymnastics as well as many dance moves and styles from breakdancing. It aims to achieve an aesthetic display of different combinations of "tricks"."</span>
 
-                                    </p>
-                              </section>
-                              <section id="section3">
-                                    <h1>Tricking + the Internet</h1>
-                                    <p>
+                              </p>
+                        </section>
+                        <section id="section2">
+                              <h2>Tricking Timeline</h2>
+                              <p>
 
-                                    </p>
-                              </section>
-                              <section id="section4">
-                                    <h1>World Map</h1>
-                                    <p>
+                              </p>
+                        </section>
+                        <section id="section3">
+                              <h2>Tricking + the Internet</h2>
+                              <p>
 
-                                    </p>
-                              </section>
-                              <section id="section5">
-                                    <h1>Tricker's Origins</h1>
-                                    <p>
+                              </p>
+                        </section>
+                        <section id="section4">
+                              <h2>World Map</h2>
+                              <p>
 
-                                    </p>
-                              </section>
-                              <section id="section6">
-                                    <h1>Training</h1>
-                                    <p>
+                              </p>
+                        </section>
+                        <section id="section5">
+                              <h2>Tricker's Origins</h2>
+                              <p>
 
-                                    </p>
-                              </section>
-                              <section id="section7">
-                                    <h1>Gender Gap</h1>
-                                    <p>
+                              </p>
+                        </section>
+                        <section id="section6">
+                              <h2>Training</h2>
+                              <p>
 
-                                    </p>
-                              </section>
-                              <section id="section8">
-                                    <h1>Popular Tricks</h1>
-                                    <p>
+                              </p>
+                        </section>
+                        <section id="section7">
+                              <h2>Gender Gap</h2>
+                              <p>
 
-                                    </p>
-                              </section>
-                              <section id="section9">
-                                    <h1>Popular Videos</h1>
-                                    <p>
+                              </p>
+                        </section>
+                        <section id="section8">
+                              <h2>Popular Tricks</h2>
+                              <p>
 
-                                    </p>
-                              </section>
-                              <section id="section10">
-                                    <h1>About</h1>
-                                    <p>
+                              </p>
+                        </section>
+                        <section id="section9">
+                              <h2>Popular Videos</h2>
+                              <p>
 
-                                    </p>
-                              </section>
-                        </div>
+                              </p>
+                        </section>
+                        <section id="section10">
+                              <h2>About</h2>
+                              <p>
+
+                              </p>
+                        </section>
                   </div>
             </div>
-      </body>
+      </div>
+</body>
 
 </html>
