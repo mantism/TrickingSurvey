@@ -85,3 +85,13 @@ video {
       padding-top: 20em;
       position: absolute;
 }
+
+.ButtonClass {
+      display: inline-block !important;
+      border: none;
+      background: none;
+}
+
+button {
+      position: relative;
+}
