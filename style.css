@@ -13,12 +13,10 @@ h1 {
 
 ul.side-nav {
       font-family: 'Ubuntu', sans-serif;
-      font-size: 20px;
-      font-weight: 100;
-      width: 100%;
-      top: 50px;
-      color: #e89d0a;
-
+      font-size: 18px;
+      font-weight: 50;
+      width: auto;
+      top: 10px;
 }
 
 p {
@@ -33,6 +31,7 @@ li.active {
 
 section {
   height: 55em;
+  border-top: solid black 1px;
 }
 
 video {
@@ -75,6 +74,10 @@ video {
       width: 90%;
 }
 
+.affix {
+
+}
+
 @media screen and (max-width: 810px) {
   #section1, #section2, #section3, #section4, #section5 , #section6, #section7, #section8, #section9, #section10{
       margin-left: 150px;
@@ -86,12 +89,19 @@ video {
       position: absolute;
 }
 
-.ButtonClass {
-      display: inline-block !important;
-      border: none;
-      background: none;
+
+#myScrollspy {
+      /*z-index: 1000;*/
+
 }
 
-button {
-      position: relative;
+#main-content {
+      border-left: solid black 1px;
 }
+
+.legend {
+    font-size: 12px;
+  }
+  rect {
+    stroke-width: 2;
+  }
