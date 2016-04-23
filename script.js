@@ -31,7 +31,7 @@ $(function() {
 
       var width = window.innerWidth;
       var height = 500;
-      var radius = 200;
+      var radius = 175;
 
       var color = d3.scale.ordinal().range(["#4f98d3", "#e73a3a"]);
 
@@ -44,7 +44,7 @@ $(function() {
       });
 
       //gender legend
-      var legendRectSize = 30;
+      var legendRectSize = 25;
       var legendSpacing = 12;
 
       var legend = svg.selectAll('.legend')
@@ -55,8 +55,9 @@ $(function() {
             .attr('transform', function(d,i){
                   var height = legendRectSize + legendSpacing;
                   var offset =  height * color.domain().length / 2;
-                  var horz = width/5;
-                  var vert = i * height - offset;
+                  var horz =  6 * legendRectSize * (i + 3) - width/10;
+                  var vert =  height;
+                  console.log(horz + " " + vert);
                   return 'translate(' + horz+ ',' + vert + ')';
             });
 
