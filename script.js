@@ -55,8 +55,8 @@ $(function() {
             .attr('transform', function(d,i){
                   var height = legendRectSize + legendSpacing;
                   var offset =  height * color.domain().length / 2;
-                  var horz =  6 * legendRectSize * (i + 3) - width/10;
-                  var vert =  height;
+                  var horz =  5.5 * legendRectSize * (i + 4) - width/2;
+                  var vert =  height * 6;
                   console.log(horz + " " + vert);
                   return 'translate(' + horz+ ',' + vert + ')';
             });
