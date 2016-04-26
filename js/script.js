@@ -72,15 +72,16 @@ $(function() {
             .text(function(d, i) {
                   return  genderData[i].count + '/ ' +  gTotal + ' ' + d ;
             });
+
 //sankey setup
 
 var widgets = "Widgets";
 var sMargin = {top: 10, right: 10, bottom: 10, left: 10},
-      sWidth = 900 - sMargin.left - sMargin.right,
-      sHeight = 500 - sMargin.top - sMargin.bottom;
+      sWidth = 1000 - sMargin.left - sMargin.right,
+      sHeight = 600 - sMargin.top - sMargin.bottom;
 
 var formatNumber = d3.format(",.0f"),
-      format = function(d) {return formatNumber(d) + " " + units;},
+      format = function(d) {return formatNumber(d) + " TWh"; },
       sColor = d3.scale.category20();
 //appends svg canvas to the page
 var sankeySVG = d3.select('#originsChart').append('svg')
@@ -89,15 +90,17 @@ var sankeySVG = d3.select('#originsChart').append('svg')
       .append('g')
       .attr('transform', 'translate(' + sMargin.left + ', ' + sMargin.top + ')');
 //set the sankey diagram properties
-var sankey = sankey().nodeWidth(36).nodePadding(40).size([width, height]);
+var sankey = d3.sankey()
+      .nodeWidth(36)
+      .nodePadding(40)
+      .size([width, height]);
+
 var sankeyPath = sankey.link();
 
-d3.json('data/tricking_origin_data.json',  function(error, graph) {
-      console.log("test");
-      sankey.nodes(graph.nodes).links(graph.links).layout(32);
-      console.log("creating graph");
+d3.json("../data/origins.json",  function(error, origins) {
+      sankey.nodes(origins.nodes).links(origins.links).layout(32);
       var link = sankeySVG.append('g').selectAll('.link')
-            .data(graph.links)
+            .data(origins.links)
             .enter().append('path')
             .attr('class', 'link')
             .attr('d', sankeyPath)
@@ -109,7 +112,7 @@ d3.json('data/tricking_origin_data.json',  function(error, graph) {
             });
 
             var node = sankeySVG.append('g').selectAll('.node')
-                  .data(graph.nodes)
+                  .data(origins.nodes)
                         .enter().append('g')
                               .attr('class', 'node')
                               .attr('transform', function(d) {
@@ -125,7 +128,7 @@ d3.json('data/tricking_origin_data.json',  function(error, graph) {
                   .attr('height', function(d) {return d.dy;})
                   .attr('width', sankey.nodeWidth())
                   .style('fill', function(d) {
-                        return d.color = color(d.name.replace(/ .*/, " "));
+                        return d.color = sColor(d.name.replace(/ .*/, " "));
                   })
                   .style('stroke', function(d) {
                         return d3.rgb(d.color).darker(2);

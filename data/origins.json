@@ -1,22 +1,21 @@
 {
 "nodes": [
-      { "node": 0, "name": "breakdancing"},
-      { "node": 1, "name": "cheerleading"},
-      { "node": 2, "name": "dancing"},
-      { "node": 3, "name": "gymnastics"},
-      { "node": 4, "name": "fromfriend"},
-      { "node": 5, "name": "internet"},
-      { "node": 6, "name": "martial arts"},
-      { "node": 7, "name": "parkour/freerunning"},
-      {"node": 8, "name": "other"},
-      { "node": 9, "name": "0-1"},
-      { "node": 10, "name": "1-3"},
-      { "node": 11, "name": "3-5"},
-      { "node": 12, "name": "6-8"},
-      { "node": 13, "name": "9-10"},
-      { "node": 14, "name": "10+"},
-      { "node": 15, "name": "Grand Total"},
-
+      { "name": "breakdancing"},
+      { "name": "cheerleading"},
+      { "name": "dancing"},
+      { "name": "gymnastics"},
+      { "name": "fromfriend"},
+      {  "name": "internet"},
+      {  "name": "martial arts"},
+      {  "name": "parkour/freerunning"},
+      {  "name": "other"},
+      {  "name": "0-1"},
+      {  "name": "1-3"},
+      {  "name": "3-5"},
+      {  "name": "6-8"},
+      {  "name": "9-10"},
+      {  "name": "10+"},
+      {  "name": "Grand Total"}
 ],
 
 "links":[
