@@ -72,33 +72,38 @@ $(function() {
             .text(function(d, i) {
                   return  genderData[i].count + '/ ' +  gTotal + ' ' + d ;
             });
-
 //sankey setup
 
 var widgets = "Widgets";
 var sMargin = {top: 10, right: 10, bottom: 10, left: 10},
       sWidth = 1000 - sMargin.left - sMargin.right,
-      sHeight = 600 - sMargin.top - sMargin.bottom;
+      sHeight = 500 - sMargin.top - sMargin.bottom;
 
 var formatNumber = d3.format(",.0f"),
-      format = function(d) {return formatNumber(d) + " TWh"; },
+      format = function(d) {
+            return formatNumber(d) + " TWh";
+      },
       sColor = d3.scale.category20();
 //appends svg canvas to the page
 var sankeySVG = d3.select('#originsChart').append('svg')
       .attr('width', sWidth + sMargin.left - sMargin.right)
       .attr('height', sHeight + sMargin.top - sMargin.bottom)
       .append('g')
-      .attr('transform', 'translate(' + sMargin.left + ', ' + sMargin.top + ')');
+      .attr('transform', 'translate(' + (sMargin.left * 4 )+ ', ' + 0 + ')');
 //set the sankey diagram properties
 var sankey = d3.sankey()
-      .nodeWidth(36)
-      .nodePadding(40)
-      .size([width, height]);
+      .nodeWidth(30)
+      .nodePadding(20)
+      .size([ sWidth - 50, sHeight - 50]);
 
 var sankeyPath = sankey.link();
 
 d3.json("../data/origins.json",  function(error, origins) {
-      sankey.nodes(origins.nodes).links(origins.links).layout(32);
+      sankey
+            .nodes(origins.nodes)
+            .links(origins.links)
+            .layout(32);
+
       var link = sankeySVG.append('g').selectAll('.link')
             .data(origins.links)
             .enter().append('path')
@@ -116,7 +121,7 @@ d3.json("../data/origins.json",  function(error, origins) {
                         .enter().append('g')
                               .attr('class', 'node')
                               .attr('transform', function(d) {
-                                    return 'translate(' + d.x + ', ' + d.y + ')';
+                                   return 'translate(' + d.x + ', ' + d.y + ')';
                               })
                               .call(d3.behavior.drag()
                                     .origin(function(d) {return d;})

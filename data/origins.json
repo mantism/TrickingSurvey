@@ -1,21 +1,21 @@
 {
 "nodes": [
-      { "name": "breakdancing"},
-      { "name": "cheerleading"},
-      { "name": "dancing"},
-      { "name": "gymnastics"},
-      { "name": "fromfriend"},
-      {  "name": "internet"},
-      {  "name": "martial arts"},
-      {  "name": "parkour/freerunning"},
-      {  "name": "other"},
-      {  "name": "0-1"},
-      {  "name": "1-3"},
-      {  "name": "3-5"},
-      {  "name": "6-8"},
-      {  "name": "9-10"},
-      {  "name": "10+"},
-      {  "name": "Grand Total"}
+      { "name": "Breakdancing"},
+      { "name": "Cheerleading"},
+      { "name": "Dancing"},
+      { "name": "Gymnastics"},
+      { "name": "From a Friend"},
+      {  "name": "Internet"},
+      {  "name": "Martial Arts"},
+      {  "name": "Parkour / Freerunning"},
+      {  "name": "Other"},
+      {  "name": "0-1 Years"},
+      {  "name": "1-3 Years"},
+      {  "name": "3-5 Years"},
+      {  "name": "6-8 Years"},
+      {  "name": "9-10 Years"},
+      {  "name": "10+ Years"},
+      {  "name": "Total"}
 ],
 
 "links":[
