@@ -72,6 +72,7 @@ $(function() {
             .text(function(d, i) {
                   return  genderData[i].count + '/ ' +  gTotal + ' ' + d ;
             });
+
 //sankey setup
 
 var widgets = "Widgets";
@@ -81,7 +82,7 @@ var sMargin = {top: 10, right: 10, bottom: 10, left: 10},
 
 var formatNumber = d3.format(",.0f"),
       format = function(d) {
-            return formatNumber(d) + " TWh";
+            return formatNumber(d) + " " + widgets;
       },
       sColor = d3.scale.category20();
 //appends svg canvas to the page
