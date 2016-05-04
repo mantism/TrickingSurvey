@@ -219,7 +219,7 @@ $(function() {
 
                       if (!data) { return ; }
                       // tooltip content
-                      return ['<div class="hoverinfo" style="margin-top: 2200px; background-color: rgb(199, 186, 178); width: 100px; height: 100px">',
+                      return ['<div class="hoverinfo" style="margin-top: 2300px; background-color: rgb(255, 245, 238); width: 200px; height: 50px">',
                           '<strong>', geo.properties.name, '</strong>',
                           '<br>Number of Trickers: <strong>', data.numTrickers, '</strong>',
                           '</div>'].join('');
@@ -227,5 +227,34 @@ $(function() {
             }
 
       });
+
+//population progress bar
+      //var ProgressBar = require('progressbar.js');
+      var line = new ProgressBar.Circle('#population-bar', {
+            color: '#63a6ff',
+            strokeWidth: 3,
+            trailWidth: 1,
+            easing: 'easeInOut',
+            duration: 1400,
+            text: {
+              autoStyleContainer: false
+            },
+            from: { color: '#aaa', width: 1 },
+            to: { color: '#5a97f2', width: 4 },
+            // Set default step function for all animate calls
+            step: function(state, circle) {
+              circle.path.setAttribute('stroke', state.color);
+              circle.path.setAttribute('stroke-width', state.width);
+
+              var value = Math.round(circle.value() * 100);
+              if (value === 0) {
+                 circle.setText('');
+              } else {
+                 circle.setText(value);
+              }
+
+            }
+      });
+
 
 })(window.d3);
