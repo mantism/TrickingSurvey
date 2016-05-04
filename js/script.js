@@ -165,19 +165,66 @@ $(function() {
       });
 
 //world map
-      var worldMap = SimpleMapD3({
-      container: '.map-container',
-      datasource: '../data/world-tricker_population.geo.json',
-      projection: 'equirectangular',
-      colorOn: true,
-      colorProperty: 'TRICKINGPOP',
-      colorSet: 'Paired',
-      colorScale: 'quantize',
-      tooltipOn: true,
-      graticuleOn: true,
-      globeOn: true,
-      legendOn: false,
-      startManually: true
-      }).start();
+      var series = [
+             ["ATG",2],["ARG",2],["AUS",13],["AUT",5],["AZE",1],["BEL",1],
+             ["BRA",3],["CAN",16],["CHL",2],["CRI",1],["CZE",6],["DNK",1],
+             ["EST",1],["FIN",4],["FRA",3],["DEU",31],["GRC",4],["GTM",1],
+             ["HKG",1],["HUN",1],["IND",2],["IRL",2],["ISR",7],["ITA",3],
+             ["JAM",1],["KOR",1],["LTU",7],["MYS",2],["MUS",1],["MEX",2],
+             ["MAR",4],["NLD",7],["NZL",2],["NOR",9],["PER",1],["PRT",1],
+             ["ROU",1],["SRB",1],["SGP",3],["SVK",1],["ZAF",1],["ESP",4],
+             ["SWE",8],["CHE",3],["THA",2],["TUN",3],["GBR",11],["USA",134],
+             ["URY",3]
+      ];
+
+      var dataset = {};
+      //array of only values from series data
+      var onlyValues = series.map(function(obj){ return obj[1]; });
+      //min and max values from series
+      var minValue = Math.min.apply(null, onlyValues),
+           maxValue = Math.max.apply(null, onlyValues);
+
+       //paletteScale for map
+       var paletteScale = d3.scale.linear()
+                 .domain([minValue,maxValue])
+                 .range(["#f96100","#ff0000"]);
+
+      //loop to add country data to dataset with corresponding color from the scale
+      series.forEach(function(item){ //
+      // item example value ["USA", 70]
+            var iso = item[0],
+                  value = item[1];
+            dataset[iso] = { numTrickers: value, fillColor: paletteScale(value) };
+      });
+
+      var tricker_map = new Datamap({
+            element: document.getElementById('map-container'),
+            projection: 'mercator',
+            fills: {
+                  defaultFill: 'rgba(197, 221, 236, 0.9)'
+            },
+            data: dataset,
+            geographyConfig: {
+                  borderColor: '#DEDEDE',
+                  highlightBorderWidth: 2,
+                  // don't change color on mouse hover
+                  highlightFillColor: function(geo) {
+                      return geo['fillColor'] || '#F5F5F5';
+                  },
+                  // only change border
+                  highlightBorderColor: '#B7B7B7',
+                  // show desired information in tooltip
+                  popupTemplate: function(geo, data) {
+                      // don't show tooltip if country don't present in dataset
+                      if (!data) { return ; }
+                      // tooltip content
+                      return ['<div class="hoverinfo">',
+                          '<strong>', geo.properties.name, '</strong>',
+                          '<br>Count: <strong>', data.numTrickers, '</strong>',
+                          '</div>'].join('');
+                  }
+            }
+
+      });
 
 })(window.d3);
