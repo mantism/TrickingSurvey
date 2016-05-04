@@ -165,25 +165,19 @@ $(function() {
       });
 
 //world map
-    var mapWidth = 900;
-     var mapHeight = 600;
-
-     var projection = d3.geo.mercator();
-
-     var mapSvg = d3.select("#map-container").append("svg")
-         .attr("width", mapWidth)
-         .attr("height", mapHeight);
-     var mapPath = d3.geo.path()
-         .projection(projection);
-     var g = svg.append("g");
-
-     d3.json("tricking_countries.json", function(error, topology) {
-         g.selectAll("path")
-           .data(topojson.object(topology, topology.objects.countries)
-               .geometries)
-         .enter()
-           .append("path")
-           .attr("d", mapPath)
-     });
+      var worldMap = SimpleMapD3({
+      container: '.map-container',
+      datasource: '../data/world-tricker_population.geo.json',
+      projection: 'equirectangular',
+      colorOn: true,
+      colorProperty: 'TRICKINGPOP',
+      colorSet: 'Paired',
+      colorScale: 'quantize',
+      tooltipOn: true,
+      graticuleOn: true,
+      globeOn: true,
+      legendOn: false,
+      startManually: true
+      }).start();
 
 })(window.d3);
