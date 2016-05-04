@@ -216,11 +216,12 @@ $(function() {
                   // show desired information in tooltip
                   popupTemplate: function(geo, data) {
                       // don't show tooltip if country don't present in dataset
+
                       if (!data) { return ; }
                       // tooltip content
-                      return ['<div class="hoverinfo">',
+                      return ['<div class="hoverinfo" style="margin-top: 2200px; background-color: rgb(199, 186, 178); width: 100px; height: 100px">',
                           '<strong>', geo.properties.name, '</strong>',
-                          '<br>Count: <strong>', data.numTrickers, '</strong>',
+                          '<br>Number of Trickers: <strong>', data.numTrickers, '</strong>',
                           '</div>'].join('');
                   }
             }
