@@ -191,19 +191,24 @@ truncateDecimals = function (number, digits) {
       var onlyValues = series.map(function(obj){ return obj[1]; });
       //min and max values from series
       var minValue = Math.min.apply(null, onlyValues),
-           maxValue = Math.max.apply(null, onlyValues);
+           maxValue = 31;//Math.max.apply(null, onlyValues);
 
        //paletteScale for map
        var paletteScale = d3.scale.linear()
                  .domain([minValue,maxValue])
-                 .range(["#f96100","#ff0000"]);
+                 .range(["#eec262","#fa5757"]);
 
       //loop to add country data to dataset with corresponding color from the scale
       series.forEach(function(item){ //
       // item example value ["USA", 70]
             var iso = item[0],
                   value = item[1];
-            dataset[iso] = { numTrickers: value, fillColor: paletteScale(value) };
+                  if (iso == 'USA') {
+                        dataset[iso] = {numTrickers: value, fillColor: '#b53535'}
+                  } else {
+                        dataset[iso] = { numTrickers: value, fillColor: paletteScale(value) };
+                  }
+
       });
 
       var tricker_map = new Datamap({
@@ -238,7 +243,7 @@ truncateDecimals = function (number, digits) {
       });
 
 //population progress bar
-      //var ProgressBar = require('progressbar.js');
+
       var bar = new ProgressBar.Line('#population-bar', {
               strokeWidth: 4,
               easing: 'easeInOut',
