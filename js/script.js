@@ -17,6 +17,15 @@ $(function() {
 
 });
 
+truncateDecimals = function (number, digits) {
+    var multiplier = Math.pow(10, digits),
+        adjustedNum = number * multiplier,
+        truncatedNum = Math[adjustedNum < 0 ? 'ceil' : 'floor'](adjustedNum);
+
+    return truncatedNum / multiplier;
+};
+
+
 (function(d3) {
 
       //gender pie chart
@@ -219,7 +228,7 @@ $(function() {
 
                       if (!data) { return ; }
                       // tooltip content
-                      return ['<div class="hoverinfo" style="margin-top: 2300px; background-color: rgb(255, 245, 238); width: 200px; height: 50px">',
+                      return ['<div class="hoverinfo" style="margin-top: 2400px; background-color: rgb(255, 245, 238); width: 200px; height: 50px">',
                           '<strong>', geo.properties.name, '</strong>',
                           '<br>Number of Trickers: <strong>', data.numTrickers, '</strong>',
                           '</div>'].join('');
@@ -230,31 +239,36 @@ $(function() {
 
 //population progress bar
       //var ProgressBar = require('progressbar.js');
-      var line = new ProgressBar.Circle('#population-bar', {
-            color: '#63a6ff',
-            strokeWidth: 3,
-            trailWidth: 1,
-            easing: 'easeInOut',
-            duration: 1400,
-            text: {
-              autoStyleContainer: false
-            },
-            from: { color: '#aaa', width: 1 },
-            to: { color: '#5a97f2', width: 4 },
-            // Set default step function for all animate calls
-            step: function(state, circle) {
-              circle.path.setAttribute('stroke', state.color);
-              circle.path.setAttribute('stroke-width', state.width);
+      var bar = new ProgressBar.Line('#population-bar', {
+              strokeWidth: 4,
+              easing: 'easeInOut',
+              duration: 1400,
+              color: '#feb569',
+              trailColor: '#eee',
+              trailWidth: 1,
+              svgStyle: {width: '100%', height: '100%'},
+              text: {
+                style: {
+                  // Text color.
+                  // Default: same as stroke color (options.color)
+                  color: '#999',
+                  position: 'absolute',
+                  right: '0',
+                  top: '30px',
+                  padding: 0,
+                  margin: 0,
+                  transform: null
+                },
+                autoStyleContainer: false
+              },
+              from: {color: '#feb569'},
+              to: {color: '#ED6A5A'},
+              step: (state, bar) => {
 
-              var value = Math.round(circle.value() * 100);
-              if (value === 0) {
-                 circle.setText('');
-              } else {
-                 circle.setText(value);
+                bar.setText( truncateDecimals(bar.value() * 0.03 + 0.0001, 4 ) + ' %');
               }
-
-            }
       });
 
+      bar.animate(0.01);  // Number from 0.0 to 1.0
 
 })(window.d3);
