@@ -244,7 +244,7 @@ truncateDecimals = function (number, digits) {
 
 //population progress bar
 
-      var bar = new ProgressBar.Line('#population-bar', {
+      /*var bar = new ProgressBar.Line('#population-bar', {
               strokeWidth: 4,
               easing: 'easeInOut',
               duration: 1400,
@@ -269,11 +269,10 @@ truncateDecimals = function (number, digits) {
               from: {color: '#feb569'},
               to: {color: '#ED6A5A'},
               step: (state, bar) => {
-
                 bar.setText( truncateDecimals(bar.value() * 0.03 + 0.0001, 4 ) + ' %');
               }
       });
 
-      bar.animate(0.01);  // Number from 0.0 to 1.0
-
+      bar.animate(0.01);  // Number from 0.0 to 1.0 */
+//
 })(window.d3);

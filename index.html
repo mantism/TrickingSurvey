@@ -15,7 +15,7 @@
       <script src="node_modules/progressbar.js/dist/progressbar.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-      <link rel="stylesheet" href="style.css?v=1.0.4">
+      <link rel="stylesheet" href="style.css?v=1.0.5">
       <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 
 
@@ -89,22 +89,27 @@
                               <p>
 
                               </p>
-                              <script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=Tricking&cmpt=q&tz=Etc/GMT%2B4&tz=Etc/GMT%2B4&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330"></script>
+                              <!--<script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=Tricking&cmpt=q&tz=Etc/GMT%2B4&tz=Etc/GMT%2B4&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330"></script>-->
                         </section>
-                        <section id="section4" style="height:90em" >
+                        <section id="section4" style="height:80em" >
                               <h2 class="section-title">World Map</h2>
                               <p style="margin-top: 20px;">
                                     According to the global tricking facebook page there are approximately 23,155 trickers in the world.
                               </p>
-                              <div id = "population-bar"></div>
-                              <div  id="population-caption"> Thats approximately .0003% of the world's population. If the world was represented by 10,000 people, only 3 of them would identify as trickers.</div>
                               <p>
                                     <a href="#section10">*</a>The data reflected in this map is from the 326 responses from the "Tricking Data Survey" given in April of 2016.
                               </p>
-                              <div id="map-container" style="background-color: #FFFFFF; width: 72em; height: 45em; margin: 1em 0 1em 1em; border: solid 1px black"></div>
 
+                              <div id="map-container" style="background-color: #FFFFFF; width: 72em; height: 45em; margin: 1em 0 1em 1em; border: solid 1px black"></div>
+                              <div class="pop_bar" id="pbar1"></div>
+                              <div class="pop_bar" id="pbar2"></div>
+                              <div class="pop_bar" id="pbar3"></div>
+                              <div class="pop_bar" id="pbar4"></div>
+                              <div class="population-caption" style="padding-top: 30px;">
                                     Countries represented by the survey: <br />
-                                    Antigua and Barbuda (2), Argentina (2), Australia (13), Austria (5), Azerbaijan (1), Belgium (1), Brazil (3), Canada (16), Chile (2), Costa Rica (1), Czech Republic (6), Denmark (1), Estonia (1), Finland (4), France (3), Germany (31), Greece (4), Guatemala (1), Hong Kong (1), Hungary (1), India (2), Ireland (2), Israel (7), Italy (3), Jamaica (1), "Korea, South" (1), Lithuania (7), Malaysia (2), Mauritius (1), Mexico (2), Morocco (4), Netherlands (7), New Zealand (2), Norway (9), Peru (1), Portugal (1), Romania (1), Serbia (1), Singapore (3), Slovakia (1), South Africa (1), Spain (4), Sweden (8), Switzerland (3), Thailand(2), Tunisia (3), United Kingdom (11), United States (134), Uruguay (3)
+                                    Antigua and Barbuda (2), Argentina (2), Australia (13), Austria (5), Azerbaijan (1), Belgium (1), Brazil (3), Canada (16), Chile (2), Costa Rica (1), Czech Republic (6), Denmark (1), Estonia (1), Finland (4), France (3), Germany (31), Greece (4), Guatemala (1), Hong Kong (1), Hungary (1), India (2), Ireland (2), Israel (7), Italy (3), Jamaica (1), South Korea (1), Lithuania (7), Malaysia (2), Mauritius (1), Mexico (2), Morocco (4), Netherlands (7), New Zealand (2), Norway (9), Peru (1), Portugal (1), Romania (1), Serbia (1), Singapore (3), Slovakia (1), South Africa (1), Spain (4), Sweden (8), Switzerland (3), Thailand(2), Tunisia (3), United Kingdom (11), United States (134), Uruguay (3)
+                              </div>
+
 
                         </section>
                         <section id="section5" style="height:50em" >
@@ -117,14 +122,12 @@
                               </div>
                               </p>
                               <div class="col-mid-2">
-                                    How They Got Into Tricking
+
                               </div>
                         </section>
                         <section id="section6" >
                               <h2 class="section-title">Training</h2>
-                              <p>
-
-                              </p>
+                              <div id="training_chart"></div>
                         </section>
                         <section id="section7" style="height:65em;" >
                               <h2 class="section-title">Gender Gap</h2>
@@ -165,7 +168,8 @@
                   </div>
             </div>
       </div>
+      <script src="js/sankey.js"></script>
+      <script src="js/script.js"></script>
 </body>
-<script src="js/sankey.js"></script>
-<script src="js/script.js"></script>
+
 </html>

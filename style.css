@@ -165,7 +165,29 @@ video {
       position: relative;
 }
 
-#population-caption {
-      margin-left: 100px;
-      margin-bottom: 20px;
+.pop_bar {
+      width: 50px;
+      height: 20px;
+      float: left;
+      margin-bottom: 10px;
+}
+
+#pbar1 {
+      background-color: #eec262;
+      margin-left:100px;
+}
+
+#pbar2 {
+      background-color: #F3975E;
+      margin-left: 0px;
+}
+
+#pbar3 {
+      background-color:  #fa5757;
+      margin-left: 0px;
+}
+
+#pbar4 {
+      background-color: #b53535;
+      margin-left: 0px;
 }
