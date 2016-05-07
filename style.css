@@ -22,7 +22,7 @@ ul.side-nav {
 }
 
 p {
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 200;
 }
 
@@ -166,7 +166,7 @@ video {
 }
 
 .pop_bar {
-      width: 50px;
+      width: 100px;
       height: 20px;
       float: left;
       margin-bottom: 10px;
@@ -174,7 +174,6 @@ video {
 
 #pbar1 {
       background-color: #eec262;
-      margin-left:100px;
 }
 
 #pbar2 {
