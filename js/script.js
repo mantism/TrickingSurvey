@@ -86,8 +86,8 @@ truncateDecimals = function (number, digits) {
 
       var widgets = "Widgets";
       var sMargin = {top: 10, right: 10, bottom: 10, left: 10},
-            sWidth = 1000 - sMargin.left - sMargin.right,
-            sHeight = 500 - sMargin.top - sMargin.bottom;
+            sWidth = 1100 - sMargin.left - sMargin.right,
+            sHeight = 600 - sMargin.top - sMargin.bottom;
 
       var formatNumber = d3.format(",.0f"),
             format = function(d) {
@@ -99,7 +99,7 @@ truncateDecimals = function (number, digits) {
             .attr('width', sWidth + sMargin.left - sMargin.right)
             .attr('height', sHeight + sMargin.top - sMargin.bottom)
             .append('g')
-            .attr('transform', 'translate(' + (sMargin.left * 4 )+ ', ' + 0 + ')');
+            .attr('transform', 'translate(' + (sMargin.left * 2 )+ ', ' + sMargin.top  + ')');
       //set the sankey diagram properties
       var sankey = d3.sankey()
             .nodeWidth(30)
@@ -120,27 +120,40 @@ truncateDecimals = function (number, digits) {
                   .attr('class', 'link')
                   .attr('d', sankeyPath)
                   .style('stroke-width', function(d) { return Math.max(1, d.dy); })
-                  .sort(function(a, b) { return b.dy - a.dy; });
-
+                  .sort(function(a, b) {
+                        return b.dy - a.dy;
+                  });
                   link.append('title').text(function(d) {
                         return d.source.name + '→' + d.target.name + '\n' + format(d.value);
                   });
+                  /*link.on('mouseenter', function(d) {
+                        console.log(d.source.name);
+                        return ['<div class="hoverinfo" style="margin-top: 2800px; background-color: rgb(255, 245, 238); width: 1000px; height: 1000px">',
+                           '<strong>',d.source.name + '→' + d.target.name,  '</strong>',
+                           '<br>Number of Trickers: <strong>', format(d.value), '</strong>',
+                           '</div>'].join();
+                  });*/
 
-                  var node = sankeySVG.append('g').selectAll('.node')
-                        .data(origins.nodes)
-                              .enter().append('g')
-                                    .attr('class', 'node')
-                                    .attr('transform', function(d) {
-                                         return 'translate(' + d.x + ', ' + d.y + ')';
-                                    })
-                                    .call(d3.behavior.drag()
-                                          .origin(function(d) {return d;})
-                                          .on('dragstart', function() {
-                                                this.parentNode.appendChild(this);
-                                          })
-                                          .on('drag', dragmove));
+            var node = sankeySVG.append('g').selectAll('.node')
+                  .data(origins.nodes)
+                        .enter().append('g')
+                        .attr('class', 'node')
+                        .attr('transform', function(d) {
+                               return 'translate(' + d.x + ', ' + d.y + ')';
+                              })
+                        .call(d3.behavior.drag()
+                        .origin(function(d) {
+                                    /*d.x = d.x + 10;
+                                    d.y = d.y + 10;*/
+                                    return d;})
+                              .on('dragstart', function() {
+                                    this.parentNode.appendChild(this);
+                              })
+                              .on('drag', dragmove));
+
+
                   node.append('rect')
-                        .attr('height', function(d) {return d.dy;})
+                        .attr('height', function(d) {return d.dy + 10;})
                         .attr('width', sankey.nodeWidth())
                         .style('fill', function(d) {
                               return d.color = sColor(d.name.replace(/ .*/, " "));
@@ -204,7 +217,7 @@ truncateDecimals = function (number, digits) {
             var iso = item[0],
                   value = item[1];
                   if (iso == 'USA') {
-                        dataset[iso] = {numTrickers: value, fillColor: '#b53535'}
+                        dataset[iso] = {numTrickers: value, fillColor: '#b53535'};
                   } else {
                         dataset[iso] = { numTrickers: value, fillColor: paletteScale(value) };
                   }
@@ -275,6 +288,55 @@ truncateDecimals = function (number, digits) {
 
       bar.animate(0.01);  // Number from 0.0 to 1.0 */
 //training bar graph
-var trainingdata = [7,40,76,93,55,32,18,4];
+      /*var trainingData = [7,40,76,93,55,32,18,4];
+      var trainingGraph = d3.select('#training_chart');
+      var trainingBar = trainingGraph.selectAll('div');
+      var barUpdate = trainingBar.data(trainingData);
+      var barEnter = barUpdate.enter().append('div');
+      barEnter.style("width", function(d) {
+            console.log(d * 10);
+             return d * 10 + "px";
+      });
 
+
+      barEnter.text(function(d) {
+            return d;
+      });*/
+      var tWidth = 500,
+            tBarHeight = 25;
+
+      var x = d3.scale.linear()
+               .range([0, tWidth]);
+
+      var training_chart = d3.select('#training_chart')
+            .attr('width', tWidth * 2);
+
+      d3.tsv('../data/training_frequency.txt', type, function (error, data) {
+            if (error) throw error;
+             x.domain([0, d3.max(data, function(d) {
+                    return d.value;
+              })]);
+
+            training_chart.attr("height", tBarHeight * data.length);
+
+            var bar = training_chart.selectAll("g")
+                  .data(data)
+                  .enter().append("g")
+                  .attr("transform", function(d, i) { return "translate(0," + i * tBarHeight + ")"; });
+
+            bar.append("rect")
+                  .attr("width", function(d) { return x(d.value); })
+                  .attr("height", tBarHeight - 1);
+
+            bar.append("text")
+                  .attr("x", function(d) { return x(d.value) - 3; })
+                  .attr("y", tBarHeight / 2)
+                  .attr("dy", ".35em")
+                  .text(function(d) { return d.value; });
+            });
+
+      function type(d) {
+            d.value = +d.value; // coerce to number
+            return d;
+      }
 })(window.d3);

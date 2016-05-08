@@ -14,7 +14,7 @@
       {  "name": "3-5 Years"},
       {  "name": "6-8 Years"},
       {  "name": "9-10 Years"},
-      {  "name": "10+ Years"},
+      {  "name": "10+ Years"}
 ],
 
 "links":[
@@ -52,6 +52,6 @@
       {"source": 13, "target": 8, "value": 1},
       {"source": 14, "target": 4, "value": 3},
       {"source": 14, "target": 5, "value": 10},
-      {"source": 14, "target": 6, "value": 15},
+      {"source": 14, "target": 6, "value": 15}
 ]
 }
