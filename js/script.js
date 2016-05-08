@@ -274,5 +274,7 @@ truncateDecimals = function (number, digits) {
       });
 
       bar.animate(0.01);  // Number from 0.0 to 1.0 */
-//
+//training bar graph
+var trainingdata = [7,40,76,93,55,32,18,4];
+
 })(window.d3);

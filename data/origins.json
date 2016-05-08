@@ -15,7 +15,6 @@
       {  "name": "6-8 Years"},
       {  "name": "9-10 Years"},
       {  "name": "10+ Years"},
-      {  "name": "Total"}
 ],
 
 "links":[
@@ -54,14 +53,5 @@
       {"source": 14, "target": 4, "value": 3},
       {"source": 14, "target": 5, "value": 10},
       {"source": 14, "target": 6, "value": 15},
-      {"source": 15, "target": 0, "value": 3},
-      {"source": 15, "target": 1, "value": 4},
-      {"source": 15, "target": 2, "value": 1},
-      {"source": 15, "target": 3, "value": 13},
-      {"source": 15, "target": 4, "value": 29},
-      {"source": 15, "target": 5, "value": 99},
-      {"source": 15, "target": 6, "value": 88},
-      {"source": 15, "target": 7, "value": 74},
-      {"source": 15, "target": 8, "value": 5}
 ]
 }
