@@ -6,12 +6,13 @@
   "dependencies": {
     "d3-sankey": "^0.2.1",
     "datamaps": "^0.5.1",
+    "express": "^4.13.4",
     "progressbar.js": "^1.0.1",
     "requirejs": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {
-        "start": "node app.js",
+        
   },
   "repository": {
     "type": "git",
