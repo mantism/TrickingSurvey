@@ -1,0 +1,26 @@
+{
+  "name": "trickingdata",
+  "version": "1.0.0",
+  "description": "tricking data viz",
+  "main": "app.js",
+  "dependencies": {
+    "d3-sankey": "^0.2.1",
+    "datamaps": "^0.5.1",
+    "progressbar.js": "^1.0.1",
+    "requirejs": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+        "start": "node app.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mantism/TrickingData.git"
+  },
+  "author": "Mikael Mantis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mantism/TrickingData/issues"
+  },
+  "homepage": "https://github.com/mantism/TrickingData"
+}
