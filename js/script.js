@@ -304,7 +304,7 @@ truncateDecimals = function (number, digits) {
       });*/
 
       var tMargin = {top: 20, right: 30, bottom: 30, left: 40},
-            tWidth = 350 - tMargin.left - tMargin.right,
+            tWidth = 450 - tMargin.left - tMargin.right,
             tHeight = 350 - tMargin.top - tMargin.bottom;
 
       var x = d3.scale.ordinal()
@@ -341,7 +341,7 @@ truncateDecimals = function (number, digits) {
                   .append('text')
                         .attr('transform', 'translate(0,' + 35 + ')')
                         .attr('x', 6)
-                        .attr('dx', '9em')
+                        .attr('dx', '12em')
                         .style('text-anchor', 'middle')
                         .text('Hours Per Week');
 
