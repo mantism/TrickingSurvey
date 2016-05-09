@@ -1,4 +1,5 @@
-body {
+
+html,body {
       position: relative;
       max-width: 100%;
       overflow-x: hidden;
@@ -191,15 +192,29 @@ video {
       margin-left: 0px;
 }
 
-#training_chart div {
-  font: 10px sans-serif;
-  background-color: steelblue;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  color: white;
+.bar {
+      fill: #45abed;
 }
 
-#training_chart rect {
-      fill: #45abed;
+.bar:hover {
+      fill: rgba(197, 221, 236, 0.9);
+}
+
+#training_chart text {
+      fill: black;
+      font-family: 'Ubuntu', sans-serif;
+      font: 10px;
+      text-anchor: end;
+}
+
+.axis text {
+      font-family: 'Ubuntu', sans-serif;
+      font: 10px;
+}
+
+.axis path,
+.axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
 }

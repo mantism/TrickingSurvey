@@ -42,7 +42,7 @@ truncateDecimals = function (number, digits) {
       var height = 500;
       var radius = 175;
 
-      var color = d3.scale.ordinal().range(["#4f98d3", "#e73a3a"]);
+      var color = d3.scale.ordinal().range(["#45abed", "#e73a3a"]);
 
       var svg = d3.select('#chart').append('svg').attr('width', width).attr('height', height).append('g').attr('transform', 'translate(' + (width/4 - 100) +  ',' + (height/2) + ')');
 
@@ -302,39 +302,68 @@ truncateDecimals = function (number, digits) {
       barEnter.text(function(d) {
             return d;
       });*/
-      var tWidth = 500,
-            tBarHeight = 25;
 
-      var x = d3.scale.linear()
-               .range([0, tWidth]);
+      var tMargin = {top: 20, right: 30, bottom: 30, left: 40},
+            tWidth = 350 - tMargin.left - tMargin.right,
+            tHeight = 350 - tMargin.top - tMargin.bottom;
+
+      var x = d3.scale.ordinal()
+          .rangeRoundBands([0, tWidth], .1);
+
+      var y = d3.scale.linear()
+               .range([tHeight, 0]);
+
+      var xAxis = d3.svg.axis()
+             .scale(x)
+             .orient("bottom");
+
+      var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
 
       var training_chart = d3.select('#training_chart')
-            .attr('width', tWidth * 2);
+            .attr("width", tWidth + tMargin.left * 4 + tMargin.right)
+            .attr("height", tHeight + tMargin.top * 4 + tMargin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + 100 + "," + (tMargin.top * 3) + ")");
 
       d3.tsv('../data/training_frequency.txt', type, function (error, data) {
             if (error) throw error;
-             x.domain([0, d3.max(data, function(d) {
-                    return d.value;
-              })]);
+            x.domain(data.map(function(d) { return d.hours; }));
+            y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-            training_chart.attr("height", tBarHeight * data.length);
+            var tBarWidth = tWidth / (data.length);
 
-            var bar = training_chart.selectAll("g")
+            training_chart.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + tHeight + ")")
+                  .call(xAxis)
+                  .append('text')
+                        .attr('transform', 'translate(0,' + 35 + ')')
+                        .attr('x', 6)
+                        .attr('dx', '9em')
+                        .style('text-anchor', 'middle')
+                        .text('Hours Per Week');
+
+            training_chart.append("g")
+                  .attr("class", "y axis")
+                  .call(yAxis)
+                  .append("text")
+                      .attr("transform", "rotate(-90)")
+                      .attr("y", 6)
+                      .attr("dy", ".71em")
+                      .style("text-anchor", "end")
+                      .text("Number of Trickers");
+
+            training_chart.selectAll(".bar")
                   .data(data)
-                  .enter().append("g")
-                  .attr("transform", function(d, i) { return "translate(0," + i * tBarHeight + ")"; });
-
-            bar.append("rect")
-                  .attr("width", function(d) { return x(d.value); })
-                  .attr("height", tBarHeight - 1);
-
-            bar.append("text")
-                  .attr("x", function(d) { return x(d.value) - 3; })
-                  .attr("y", tBarHeight / 2)
-                  .attr("dy", ".35em")
-                  .text(function(d) { return d.value; });
+                .enter().append("rect")
+                  .attr("class", "bar")
+                  .attr("x", function(d) { return x(d.hours); })
+                  .attr("y", function(d) { return y(d.value); })
+                  .attr("height", function(d) { return tHeight - y(d.value); })
+                  .attr("width", x.rangeBand());
             });
-
       function type(d) {
             d.value = +d.value; // coerce to number
             return d;
