@@ -288,21 +288,6 @@ truncateDecimals = function (number, digits) {
 
       bar.animate(0.01);  // Number from 0.0 to 1.0 */
 //training bar graph
-      /*var trainingData = [7,40,76,93,55,32,18,4];
-      var trainingGraph = d3.select('#training_chart');
-      var trainingBar = trainingGraph.selectAll('div');
-      var barUpdate = trainingBar.data(trainingData);
-      var barEnter = barUpdate.enter().append('div');
-      barEnter.style("width", function(d) {
-            console.log(d * 10);
-             return d * 10 + "px";
-      });
-
-
-      barEnter.text(function(d) {
-            return d;
-      });*/
-
       var tMargin = {top: 20, right: 30, bottom: 30, left: 40},
             tWidth = 450 - tMargin.left - tMargin.right,
             tHeight = 350 - tMargin.top - tMargin.bottom;
@@ -364,8 +349,203 @@ truncateDecimals = function (number, digits) {
                   .attr("height", function(d) { return tHeight - y(d.value); })
                   .attr("width", x.rangeBand());
             });
+
       function type(d) {
             d.value = +d.value; // coerce to number
             return d;
       }
+
+//kicking bar graph
+            var kMargin = {top: 20, right: 30, bottom: 30, left: 40},
+                  kWidth = 400 - tMargin.left - tMargin.right,
+                  kHeight = 300 - tMargin.top - tMargin.bottom;
+
+            var kx = d3.scale.linear()
+                  .range([0, kWidth]);
+
+            var ky = d3.scale.ordinal()
+                  .rangeRoundBands([kHeight, 0], .1);
+
+            var kXAxis = d3.svg.axis()
+                   .scale(kx)
+                   .orient("bottom");
+
+            var kYAxis = d3.svg.axis()
+                  .scale(ky)
+                  .orient("left");
+
+            var kicks_chart = d3.select('#kicks_chart')
+                  .attr("width", kWidth + kMargin.left * 4 + kMargin.right)
+                  .attr("height", kHeight + kMargin.top * 4 + kMargin.bottom)
+                  .append("g")
+                  .attr("transform", "translate(" + 140 + "," + (kMargin.top * 3) + ")");
+
+            d3.csv('../data/popular_kicks.csv', type, function (error, data) {
+                  if (error) throw error;
+
+                  ky.domain(data.map(function(d) {return d.kick; }));
+                  kx.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+                  var kBarWidth = kWidth / (data.length);
+
+                  kicks_chart.append("g")
+                        .attr("class", "x axis")
+                        .attr("transform", "translate(0," + kHeight + ")")
+                        .call(kXAxis)
+                        .append('text')
+                              .attr('transform', 'translate(0,' + 35 + ')')
+                              .attr('x', 6)
+                              .attr('dx', '12em')
+                              .style('text-anchor', 'middle')
+                              .text('Number of Favorites');
+
+                  kicks_chart.append("g")
+                        .attr("class", "y axis")
+                        .call(kYAxis)
+                        .append("text")
+                            .attr("transform", "translate(120, -10)")
+                            .attr("y", 6)
+                            .attr('dx', '3em')
+                            .style("text-anchor", "end")
+                            .style('font-size', '18px')
+                            .text("Kicks");
+
+                  kicks_chart.selectAll(".bar")
+                        .data(data)
+                      .enter().append("rect")
+                        .attr("class", "bar")
+                        .attr("y", function(d) { return ky(d.kick); })
+                        .attr("x",function(d) { kx(d.value); })
+                        .attr("width", function(d) { return  kx(d.value); })
+                        .attr("height", ky.rangeBand());
+                  });
+//flips chart
+      var fMargin = {top: 20, right: 30, bottom: 30, left: 40},
+            fWidth = 400 - fMargin.left - fMargin.right,
+            fHeight = 300 - fMargin.top - fMargin.bottom;
+
+      var fx = d3.scale.linear()
+            .range([0, fWidth]);
+
+      var fy = d3.scale.ordinal()
+            .rangeRoundBands([fHeight, 0], .1);
+
+      var fXAxis = d3.svg.axis()
+             .scale(fx)
+             .orient("bottom");
+
+      var fYAxis = d3.svg.axis()
+            .scale(fy)
+            .orient("left");
+
+      var flips_chart = d3.select('#flips_chart')
+            .attr("width", fWidth + fMargin.left * 4 + fMargin.right)
+            .attr("height", fHeight + fMargin.top * 4 + fMargin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + 220 + "," + (fMargin.top * 3) + ")");
+
+      d3.csv('../data/popular_flips.csv', type, function (error, data) {
+            if (error) throw error;
+
+            fy.domain(data.map(function(d) {return d.flip; }));
+            fx.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+            var fBarWidth = fWidth / (data.length);
+
+            flips_chart.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + fHeight + ")")
+                  .call(fXAxis)
+                  .append('text')
+                        .attr('transform', 'translate(0,' + 35 + ')')
+                        .attr('x', 6)
+                        .attr('dx', '12em')
+                        .style('text-anchor', 'middle')
+                        .text('Number of Favorites');
+
+            flips_chart.append("g")
+                  .attr("class", "y axis")
+                  .call(fYAxis)
+                  .append("text")
+                      .attr("transform", "translate(120, -10)")
+                      .attr("y", 6)
+                      .attr('dx', '3em')
+                      .style("text-anchor", "end")
+                      .style('font-size', '18px')
+                      .text("Flips");
+
+            flips_chart.selectAll(".bar")
+                  .data(data)
+                .enter().append("rect")
+                  .attr("class", "bar")
+                  .attr("y", function(d) { return fy(d.flip); })
+                  .attr("x",function(d) { fx(d.value); })
+                  .attr("width", function(d) { return  fx(d.value); })
+                  .attr("height", fy.rangeBand());
+            });
+
+//twists chart
+      var twMargin = {top: 20, right: 30, bottom: 30, left: 40},
+            twWidth = 900 - twMargin.left - twMargin.right,
+            twHeight = 300 - twMargin.top - twMargin.bottom;
+
+      var twx = d3.scale.linear()
+            .range([0, fWidth]);
+
+      var twy = d3.scale.ordinal()
+            .rangeRoundBands([twHeight, 0], .1);
+
+      var twXAxis = d3.svg.axis()
+             .scale(twx)
+             .orient("bottom");
+
+      var twYAxis = d3.svg.axis()
+            .scale(twy)
+            .orient("left");
+
+      var twists_chart = d3.select('#twists_chart')
+            .attr("width", twWidth + twMargin.left * 4 + twMargin.right)
+            .attr("height", twHeight + twMargin.top * 4 + twMargin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + 350 + "," + (fMargin.top * 3) + ")");
+
+      d3.csv('../data/popular_twists.csv', type, function (error, data) {
+            if (error) throw error;
+
+            twy.domain(data.map(function(d) {return d.twist; }));
+            twx.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+            var twBarWidth = fWidth / (data.length);
+
+            twists_chart.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + twHeight + ")")
+                  .call(twXAxis)
+                  .append('text')
+                        .attr('transform', 'translate(0,' + 35 + ')')
+                        .attr('x', 6)
+                        .attr('dx', '12em')
+                        .style('text-anchor', 'middle')
+                        .text('Number of Favorites');
+
+            twists_chart.append("g")
+                  .attr("class", "y axis")
+                  .call(twYAxis)
+                  .append("text")
+                      .attr("transform", "translate(120, -10)")
+                      .attr("y", 6)
+                      .attr('dx', '3em')
+                      .style("text-anchor", "end")
+                      .style('font-size', '18px')
+                      .text("Twists");
+
+            twists_chart.selectAll(".bar")
+                  .data(data)
+                .enter().append("rect")
+                  .attr("class", "bar")
+                  .attr("y", function(d) { return twy(d.twist); })
+                  .attr("x",function(d) { twx(d.value); })
+                  .attr("width", function(d) { return  twx(d.value); })
+                  .attr("height", twy.rangeBand());
+            });
 })(window.d3);

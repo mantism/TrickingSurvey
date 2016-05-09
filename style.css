@@ -201,6 +201,17 @@ video {
       fill: #45abed;
 }
 
+#kicks_chart .bar {
+      fill: #07aa3e;
+}
+
+#twists_chart .bar {
+      fill: #e73a3a;
+}
+
+
+#twists_chart .bar:hover,
+#kicks_chart .bar:hover,
 .bar:hover {
       fill: rgba(197, 221, 236, 0.9);
 }
