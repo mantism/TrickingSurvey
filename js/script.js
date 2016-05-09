@@ -246,7 +246,7 @@ truncateDecimals = function (number, digits) {
 
                       if (!data) { return ; }
                       // tooltip content
-                      return ['<div class="hoverinfo" style="margin-top: 2400px; background-color: rgb(255, 245, 238); width: 200px; height: 50px">',
+                      return ['<div class="hoverinfo" style="margin-top: 1100px; background-color: rgb(255, 245, 238); width: 200px; height: 50px">',
                           '<strong>', geo.properties.name, '</strong>',
                           '<br>Number of Trickers: <strong>', data.numTrickers, '</strong>',
                           '</div>'].join('');
@@ -293,7 +293,7 @@ truncateDecimals = function (number, digits) {
             tHeight = 350 - tMargin.top - tMargin.bottom;
 
       var x = d3.scale.ordinal()
-          .rangeRoundBands([0, tWidth], .1);
+          .rangeRoundBands([0, tWidth], 0.1);
 
       var y = d3.scale.linear()
                .range([tHeight, 0]);
@@ -364,7 +364,7 @@ truncateDecimals = function (number, digits) {
                   .range([0, kWidth]);
 
             var ky = d3.scale.ordinal()
-                  .rangeRoundBands([kHeight, 0], .1);
+                  .rangeRoundBands([kHeight, 0], 0.1);
 
             var kXAxis = d3.svg.axis()
                    .scale(kx)
@@ -378,7 +378,7 @@ truncateDecimals = function (number, digits) {
                   .attr("width", kWidth + kMargin.left * 4 + kMargin.right)
                   .attr("height", kHeight + kMargin.top * 4 + kMargin.bottom)
                   .append("g")
-                  .attr("transform", "translate(" + 140 + "," + (kMargin.top * 3) + ")");
+                  .attr("transform", "translate(" + 180 + "," + (kMargin.top * 3) + ")");
 
             d3.csv('../data/popular_kicks.csv', type, function (error, data) {
                   if (error) throw error;
@@ -428,7 +428,7 @@ truncateDecimals = function (number, digits) {
             .range([0, fWidth]);
 
       var fy = d3.scale.ordinal()
-            .rangeRoundBands([fHeight, 0], .1);
+            .rangeRoundBands([fHeight, 0], 0.1);
 
       var fXAxis = d3.svg.axis()
              .scale(fx)
@@ -442,7 +442,7 @@ truncateDecimals = function (number, digits) {
             .attr("width", fWidth + fMargin.left * 4 + fMargin.right)
             .attr("height", fHeight + fMargin.top * 4 + fMargin.bottom)
             .append("g")
-            .attr("transform", "translate(" + 220 + "," + (fMargin.top * 3) + ")");
+            .attr("transform", "translate(" + 260 + "," + (fMargin.top * 3) + ")");
 
       d3.csv('../data/popular_flips.csv', type, function (error, data) {
             if (error) throw error;
@@ -493,7 +493,7 @@ truncateDecimals = function (number, digits) {
             .range([0, fWidth]);
 
       var twy = d3.scale.ordinal()
-            .rangeRoundBands([twHeight, 0], .1);
+            .rangeRoundBands([twHeight, 0], 0.1);
 
       var twXAxis = d3.svg.axis()
              .scale(twx)
@@ -507,7 +507,7 @@ truncateDecimals = function (number, digits) {
             .attr("width", twWidth + twMargin.left * 4 + twMargin.right)
             .attr("height", twHeight + twMargin.top * 4 + twMargin.bottom)
             .append("g")
-            .attr("transform", "translate(" + 350 + "," + (fMargin.top * 3) + ")");
+            .attr("transform", "translate(" + 400 + "," + (fMargin.top * 3) + ")");
 
       d3.csv('../data/popular_twists.csv', type, function (error, data) {
             if (error) throw error;
