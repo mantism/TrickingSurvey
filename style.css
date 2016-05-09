@@ -3,6 +3,7 @@ html,body {
       position: relative;
       max-width: 100%;
       overflow-x: hidden;
+      font-family: 'Ubuntu', sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -12,6 +13,10 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
       font-size: 4em;
+}
+
+h5 {
+      font-size: 1.2em;
 }
 
 ul.side-nav {
@@ -24,7 +29,7 @@ ul.side-nav {
 
 p {
       font-size: 18px;
-      font-weight: 200;
+      font-weight: 300;
 }
 
 
