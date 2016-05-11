@@ -35,8 +35,9 @@ li.active {
 }
 
 section {
-  height: 55em;
+  /*height: 55em;*/
   border-top: solid black 1px;
+  margin-bottom: 20px;
 }
 
 video {
@@ -59,7 +60,6 @@ video {
       text-align: center;
       font-weight: 600;
       font-size: 3em;
-      padding-top: 20px;
 }
 
 .map-container {
@@ -169,7 +169,7 @@ video {
 }
 
 .pop_bar {
-      width: 75px;
+      width: 100px;
       height: 20px;
       float: left;
       margin-bottom: 10px;
@@ -230,4 +230,9 @@ video {
       fill: none;
       stroke: #000;
       shape-rendering: crispEdges;
+}
+
+.youtube-container {
+      width: 100%;
+      margin-left: 5em;
 }

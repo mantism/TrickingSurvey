@@ -84,9 +84,9 @@ truncateDecimals = function (number, digits) {
 
 //sankey setup
 
-      var widgets = "Widgets";
+      var widgets = "Trickers";
       var sMargin = {top: 10, right: 10, bottom: 10, left: 10},
-            sWidth = 1100 - sMargin.left - sMargin.right,
+            sWidth = 1200 - sMargin.left - sMargin.right,
             sHeight = 600 - sMargin.top - sMargin.bottom;
 
       var formatNumber = d3.format(",.0f"),
@@ -357,7 +357,7 @@ truncateDecimals = function (number, digits) {
 
 //kicking bar graph
             var kMargin = {top: 20, right: 30, bottom: 30, left: 40},
-                  kWidth = 400 - tMargin.left - tMargin.right,
+                  kWidth = 450 - tMargin.left - tMargin.right,
                   kHeight = 300 - tMargin.top - tMargin.bottom;
 
             var kx = d3.scale.linear()
@@ -378,7 +378,7 @@ truncateDecimals = function (number, digits) {
                   .attr("width", kWidth + kMargin.left * 4 + kMargin.right)
                   .attr("height", kHeight + kMargin.top * 4 + kMargin.bottom)
                   .append("g")
-                  .attr("transform", "translate(" + 180 + "," + (kMargin.top * 3) + ")");
+                  .attr("transform", "translate(" + 120 + "," + (kMargin.top * 3) + ")");
 
             d3.csv('../data/popular_kicks.csv', type, function (error, data) {
                   if (error) throw error;
@@ -420,8 +420,8 @@ truncateDecimals = function (number, digits) {
                         .attr("height", ky.rangeBand());
                   });
 //flips chart
-      var fMargin = {top: 20, right: 30, bottom: 30, left: 40},
-            fWidth = 400 - fMargin.left - fMargin.right,
+      var fMargin = {top: 20, right: 30, bottom: 30, left: 20},
+            fWidth = 450 - fMargin.left - fMargin.right,
             fHeight = 300 - fMargin.top - fMargin.bottom;
 
       var fx = d3.scale.linear()
@@ -442,7 +442,7 @@ truncateDecimals = function (number, digits) {
             .attr("width", fWidth + fMargin.left * 4 + fMargin.right)
             .attr("height", fHeight + fMargin.top * 4 + fMargin.bottom)
             .append("g")
-            .attr("transform", "translate(" + 260 + "," + (fMargin.top * 3) + ")");
+            .attr("transform", "translate(" + 140 + "," + (fMargin.top * 3) + ")");
 
       d3.csv('../data/popular_flips.csv', type, function (error, data) {
             if (error) throw error;
@@ -486,7 +486,7 @@ truncateDecimals = function (number, digits) {
 
 //twists chart
       var twMargin = {top: 20, right: 30, bottom: 30, left: 40},
-            twWidth = 900 - twMargin.left - twMargin.right,
+            twWidth = 450 - twMargin.left - twMargin.right,
             twHeight = 300 - twMargin.top - twMargin.bottom;
 
       var twx = d3.scale.linear()
@@ -507,7 +507,7 @@ truncateDecimals = function (number, digits) {
             .attr("width", twWidth + twMargin.left * 4 + twMargin.right)
             .attr("height", twHeight + twMargin.top * 4 + twMargin.bottom)
             .append("g")
-            .attr("transform", "translate(" + 400 + "," + (fMargin.top * 3) + ")");
+            .attr("transform", "translate(" + 150 + "," + (twMargin.top * 3) + ")");
 
       d3.csv('../data/popular_twists.csv', type, function (error, data) {
             if (error) throw error;
