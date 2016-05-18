@@ -108,7 +108,7 @@ truncateDecimals = function (number, digits) {
 
       var sankeyPath = sankey.link();
 
-      d3.json("../data/origins.json",  function(error, origins) {
+      d3.json("origins.json",  function(error, origins) {
             sankey
                   .nodes(origins.nodes)
                   .links(origins.links)
@@ -312,7 +312,7 @@ truncateDecimals = function (number, digits) {
             .append("g")
             .attr("transform", "translate(" + 100 + "," + (tMargin.top * 3) + ")");
 
-      d3.tsv('../data/training_frequency.txt', type, function (error, data) {
+      d3.tsv('training_frequency.txt', type, function (error, data) {
             if (error) throw error;
             x.domain(data.map(function(d) { return d.hours; }));
             y.domain([0, d3.max(data, function(d) { return d.value; })]);
@@ -380,7 +380,7 @@ truncateDecimals = function (number, digits) {
                   .append("g")
                   .attr("transform", "translate(" + 120 + "," + (kMargin.top * 3) + ")");
 
-            d3.csv('../data/popular_kicks.csv', type, function (error, data) {
+            d3.csv('popular_kicks.csv', type, function (error, data) {
                   if (error) throw error;
 
                   ky.domain(data.map(function(d) {return d.kick; }));
@@ -444,7 +444,7 @@ truncateDecimals = function (number, digits) {
             .append("g")
             .attr("transform", "translate(" + 140 + "," + (fMargin.top * 3) + ")");
 
-      d3.csv('../data/popular_flips.csv', type, function (error, data) {
+      d3.csv('popular_flips.csv', type, function (error, data) {
             if (error) throw error;
 
             fy.domain(data.map(function(d) {return d.flip; }));
@@ -509,7 +509,7 @@ truncateDecimals = function (number, digits) {
             .append("g")
             .attr("transform", "translate(" + 150 + "," + (twMargin.top * 3) + ")");
 
-      d3.csv('../data/popular_twists.csv', type, function (error, data) {
+      d3.csv('popular_twists.csv', type, function (error, data) {
             if (error) throw error;
 
             twy.domain(data.map(function(d) {return d.twist; }));
