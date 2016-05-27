@@ -35,7 +35,6 @@ li.active {
 }
 
 section {
-  /*height: 55em;*/
   border-top: solid black 1px;
   margin-bottom: 20px;
 }
@@ -84,15 +83,14 @@ video {
 
 @media screen and (max-width: 810px) {
   #section1, #section2, #section3, #section4, #section5 , #section6, #section7, #section8, #section9, #section10{
-      margin-left: 150px;
+      /*margin-left: 150px;*/
   }
 }
 #titlesection {
       /*height: 750px;*/
-      margin-top: 20em;
+      margin-top: 20%;
       position: absolute;
 }
-
 
 #myScrollspy {
       /*z-index: 1000;*/
@@ -100,7 +98,7 @@ video {
 }
 
 #main-content {
-      border-left: solid black 1px;
+      /*border-left: solid black 1px;*/
 }
 
 .legend {
