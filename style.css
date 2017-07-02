@@ -34,7 +34,6 @@ li.active {
 }
 
 section {
-  border-top: solid black 1px;
   margin-bottom: 20px;
 }
 
@@ -58,6 +57,7 @@ video {
       text-align: center;
       font-weight: 600;
       font-size: 3em;
+      border-bottom: solid 1px #48a4e7;
 }
 
 .map-container {

@@ -1,1 +1,4 @@
 # TrickingData
+This project is a visualization of the data gathered from a survey sent out in April 2016 to the tricking community, as well as data from <a href="https://www.google.com/trends/explore#q=tricking">google trends</a>, <a href="https://www.facebook.com/groups/294636920876783/">facebook</a>, <a href="http://www.club540.com/tricktionary">club540</a>, and <a href="https://www.youtube.com">youtube</a>. <br /> <br />
+It is an attempt to educate those outside of the tricking community on what tricking is as well as provide some hopefully new and insightful data for those already immersed in tricking. <br /> <br />
+The anonymous survey asked trickers "What country are you from?", "How did you discover/get into tricking?", "Whats your gender?", "How many years have you been tricking?", "Whats your favorite trick to do?", and "How many hours a week do you train?". <br />
