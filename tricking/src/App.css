@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik|Trirong');
+html, body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.header {
+  background: #48a4e7;
+  background: -webkit-linear-gradient(left top,  #48a4e7, #0584ba);
+  background: -o-linear-gradient(bottom right, #48a4e7, #0584ba);
+  background: -moz-linear-gradient(bottom right, #48a4e7, #0584ba);
+  background: linear-gradient(bottom right, #48a4e7, #0584ba);
+  height: 18rem;
+  padding-top: 3rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'Trirong', sans-serif;
+}
+
+.icons {
+  padding: 0;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.gainer {
+  margin-left: 10px;
+  margin-right: 10px;
+  animation: play 2.0s steps(40) infinite;
+}
+
+@media (min-width: 25em) {
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .gainer {
+    background: url('./images/gainer-sprite32.svg');
+  }
+
+  .nodes {
+    background: url('./images/nodes32.svg');
+  }
+
+  .pie {
+    background: url('./images/piechart32.svg')
+  }
+
+  @keyframes play {
+    100% { background-position: 0 -1280px; }
+  }
+}
+
+@media (min-width: 40em) {
+  .icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .gainer {
+    background: url('./images/gainer-sprite64.svg');
+  }
+
+  .nodes {
+    background: url('./images/nodes64.svg');
+  }
+
+  .pie {
+    background: url('./images/piechart64.svg');
+  }
+
+  @keyframes play {
+   100% { background-position: 0 -2560px; }
+  }
+}
+
+
+
