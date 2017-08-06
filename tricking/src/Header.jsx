@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Icons from './Icons';
+
 class Header extends Component {
   render() {
     return (

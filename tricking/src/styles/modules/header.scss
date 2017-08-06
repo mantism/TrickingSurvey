@@ -1,29 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik|Trirong');
-html, body {
-  font-family: 'Rubik', sans-serif;
-}
-
-h1 {
-  font-weight: bold;
-}
-
-h3 {
-  font-weight: 400;
-}
-
 .header {
-  background: #48a4e7;
-  background: -webkit-linear-gradient(left top,  #48a4e7, #0584ba);
-  background: -o-linear-gradient(bottom right, #48a4e7, #0584ba);
-  background: -moz-linear-gradient(bottom right, #48a4e7, #0584ba);
-  background: linear-gradient(bottom right, #48a4e7, #0584ba);
+  background: $orange;
+  background: -webkit-linear-gradient(to left top,  $orange, $light-blue);
+  background: -o-linear-gradient(to left top, $orange, $light-blue);
+  background: -moz-linear-gradient(to left top, $orange, $light-blue);
+  background: linear-gradient(to left top, $orange, $light-blue);
   height: 18rem;
   padding-top: 3rem;
   color: #fff;
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: 'Trirong', sans-serif;
+  font-family: $header-font;
 }
 
 .icons {

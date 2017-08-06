@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik|Trirong");
+.About {
+  padding-left: 10rem;
+  padding-right: 10rem;
+  font-family: "Rubik", sans-serif; }
+  .About h1 {
+    margin-bottom: 0; }
+  .About p {
+    font-size: 1.25rem; }
+
+html, body {
+  font-family: "Rubik", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Trirong", sans-serif; }
+
+h1 {
+  font-weight: bold; }
+
+h3 {
+  font-weight: 400; }
+
+.divider {
+  margin: 0;
+  height: 0.25rem; }
+  .divider ul {
+    margin: -1rem 0 0 0;
+    padding: 0;
+    height: 0.25rem; }
+  .divider li {
+    margin: 0;
+    display: inline-block;
+    height: 0.25rem;
+    width: 33%; }
+
+.colorA {
+  background: #0584ba; }
+
+.colorB {
+  background: #51848b; }
+
+.colorC {
+  background: peru; }
+
+.header {
+  background: peru;
+  background: -webkit-linear-gradient(to left top, peru, #0584ba);
+  background: -o-linear-gradient(to left top, peru, #0584ba);
+  background: -moz-linear-gradient(to left top, peru, #0584ba);
+  background: linear-gradient(to left top, peru, #0584ba);
+  height: 18rem;
+  padding-top: 3rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Trirong", sans-serif; }
+
+.icons {
+  padding: 0; }
+
+.icon {
+  display: inline-block; }
+
+.gainer {
+  margin-left: 10px;
+  margin-right: 10px;
+  animation: play 2s steps(40) infinite; }
+
+@media (min-width: 25em) {
+  .icon {
+    width: 32px;
+    height: 32px; }
+  .gainer {
+    background: url("./images/gainer-sprite32.svg"); }
+  .nodes {
+    background: url("./images/nodes32.svg"); }
+  .pie {
+    background: url("./images/piechart32.svg"); }
+  @keyframes play {
+    100% {
+      background-position: 0 -1280px; } } }
+
+@media (min-width: 40em) {
+  .icon {
+    width: 64px;
+    height: 64px; }
+  .gainer {
+    background: url("./images/gainer-sprite64.svg"); }
+  .nodes {
+    background: url("./images/nodes64.svg"); }
+  .pie {
+    background: url("./images/piechart64.svg"); }
+  @keyframes play {
+    100% {
+      background-position: 0 -2560px; } } }
+
+.text-section {
+  font-size: 1.25rem; }
