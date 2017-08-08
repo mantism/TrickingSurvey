@@ -1,0 +1,43 @@
+.Geography {
+  .Map {
+    margin: 0 auto;
+    width: 90%;
+    height: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .content {
+    position: relative;
+    left: 0;
+    @media (min-width: 25em) {
+      top: 10rem;
+    }
+
+    @media (min-width: 35em) {
+      top: 15rem;
+    }
+
+    @media (min-width: 45em) {
+      top: 20rem;
+    }
+
+    @media (min-width: 60em) {
+      top: 24rem;
+    }
+    left: 0;
+  }
+}
+
+
+
+.marker {
+  opacity: 0.5;
+}

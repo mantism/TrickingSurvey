@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "d3-array": "^1.2.0",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",
     "react": "^15.6.1",
+    "react-d3-map-bubble": "^0.6.0",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
   },
@@ -17,5 +19,10 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "d3-geo": "^1.6.4",
+    "d3-selection": "^1.1.0",
+    "lodash": "^4.17.4"
   }
 }

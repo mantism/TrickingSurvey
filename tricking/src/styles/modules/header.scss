@@ -4,13 +4,12 @@
   background: -o-linear-gradient(to left top, $orange, $light-blue);
   background: -moz-linear-gradient(to left top, $orange, $light-blue);
   background: linear-gradient(to left top, $orange, $light-blue);
-  height: 18rem;
   padding-top: 3rem;
   color: #fff;
   text-align: center;
-  font-size: 1.5rem;
   line-height: 2rem;
   font-family: $header-font;
+  transition: height 1s;
 }
 
 .icons {
@@ -28,6 +27,13 @@
 }
 
 @media (min-width: 25em) {
+  .header {
+    height: 12rem;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
   .icon {
     width: 32px;
     height: 32px;
@@ -51,6 +57,13 @@
 }
 
 @media (min-width: 40em) {
+  .header {
+    height: 15rem;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
   .icon {
     width: 64px;
     height: 64px;

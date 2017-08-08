@@ -1,25 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik|Trirong");
-.About {
-  padding-left: 10rem;
-  padding-right: 10rem;
-  font-family: "Rubik", sans-serif; }
-  .About h1 {
-    margin-bottom: 0; }
-  .About p {
-    font-size: 1.25rem; }
-
-html, body {
-  font-family: "Rubik", sans-serif; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Trirong", sans-serif; }
-
-h1 {
-  font-weight: bold; }
-
-h3 {
-  font-weight: 400; }
-
+@import url("https://fonts.googleapis.com/css?family=Quicksand|Roboto");
 .divider {
   margin: 0;
   height: 0.25rem; }
@@ -31,7 +10,7 @@ h3 {
     margin: 0;
     display: inline-block;
     height: 0.25rem;
-    width: 33%; }
+    width: 33.333333%; }
 
 .colorA {
   background: #0584ba; }
@@ -40,21 +19,46 @@ h3 {
   background: #51848b; }
 
 .colorC {
-  background: peru; }
+  background: #cd853f; }
+
+html, body {
+  font-family: "Roboto", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Quicksand", sans-serif;
+  transition: font-size 1s; }
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0.35rem; }
+
+h3 {
+  font-weight: 400;
+  font-size: 1.5rem; }
+
+p {
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif; }
+
+.highlight {
+  color: #51848b; }
+
+.CTA {
+  color: #cd853f; }
 
 .header {
-  background: peru;
-  background: -webkit-linear-gradient(to left top, peru, #0584ba);
-  background: -o-linear-gradient(to left top, peru, #0584ba);
-  background: -moz-linear-gradient(to left top, peru, #0584ba);
-  background: linear-gradient(to left top, peru, #0584ba);
-  height: 18rem;
+  background: #cd853f;
+  background: -webkit-linear-gradient(to left top, #cd853f, #0584ba);
+  background: -o-linear-gradient(to left top, #cd853f, #0584ba);
+  background: -moz-linear-gradient(to left top, #cd853f, #0584ba);
+  background: linear-gradient(to left top, #cd853f, #0584ba);
   padding-top: 3rem;
   color: #fff;
   text-align: center;
-  font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Trirong", sans-serif; }
+  font-family: "Quicksand", sans-serif;
+  transition: height 1s; }
 
 .icons {
   padding: 0; }
@@ -68,6 +72,10 @@ h3 {
   animation: play 2s steps(40) infinite; }
 
 @media (min-width: 25em) {
+  .header {
+    height: 12rem; }
+    .header h1 {
+      font-size: 2rem; }
   .icon {
     width: 32px;
     height: 32px; }
@@ -82,6 +90,10 @@ h3 {
       background-position: 0 -1280px; } } }
 
 @media (min-width: 40em) {
+  .header {
+    height: 15rem; }
+    .header h1 {
+      font-size: 3rem; }
   .icon {
     width: 64px;
     height: 64px; }
@@ -95,5 +107,77 @@ h3 {
     100% {
       background-position: 0 -2560px; } } }
 
-.text-section {
-  font-size: 1.25rem; }
+.image-container {
+  display: inline-block;
+  margin: 1rem 0.5rem; }
+  .image-container img {
+    transition: height 1s, width 1s; }
+    @media (min-width: 25em) {
+      .image-container img {
+        height: 4.5rem;
+        width: 8rem; } }
+    @media (min-width: 35em) {
+      .image-container img {
+        height: 6.75rem;
+        width: 12rem; } }
+    @media (min-width: 45em) {
+      .image-container img {
+        height: 9rem;
+        width: 16rem; } }
+    @media (min-width: 60em) {
+      .image-container img {
+        height: 13.5rem;
+        width: 24rem; } }
+
+.Geography .Map {
+  margin: 0 auto;
+  width: 90%;
+  height: 0;
+  position: relative;
+  top: 0;
+  left: 0; }
+  .Geography .Map svg {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.Geography .content {
+  position: relative;
+  left: 0;
+  left: 0; }
+  @media (min-width: 25em) {
+    .Geography .content {
+      top: 10rem; } }
+  @media (min-width: 35em) {
+    .Geography .content {
+      top: 15rem; } }
+  @media (min-width: 45em) {
+    .Geography .content {
+      top: 20rem; } }
+  @media (min-width: 60em) {
+    .Geography .content {
+      top: 24rem; } }
+
+.marker {
+  opacity: 0.5; }
+
+.section {
+  transition: padding 1s; }
+  @media (min-width: 25em) {
+    .section {
+      padding-left: 5rem;
+      padding-right: 5rem; } }
+  @media (min-width: 40em) {
+    .section {
+      padding-left: 7rem;
+      padding-right: 7rem; } }
+  @media (min-width: 60em) {
+    .section {
+      padding-left: 10rem;
+      padding-right: 10rem; } }
+  .section .content {
+    background-color: #f8f6f2;
+    margin-top: 0.50rem;
+    padding: 1rem; }
+    .section .content + .no-background {
+      background-color: white; }

@@ -1,0 +1,21 @@
+.image-container {
+  display: inline-block;
+  margin: 1rem 0.5rem; }
+  .image-container img {
+    transition: height 1s, width 1s; }
+    @media (min-width: 25em) {
+      .image-container img {
+        height: 4.5rem;
+        width: 8rem; } }
+    @media (min-width: 35em) {
+      .image-container img {
+        height: 6.75rem;
+        width: 12rem; } }
+    @media (min-width: 45em) {
+      .image-container img {
+        height: 9rem;
+        width: 16rem; } }
+    @media (min-width: 60em) {
+      .image-container img {
+        height: 13.5rem;
+        width: 24rem; } }

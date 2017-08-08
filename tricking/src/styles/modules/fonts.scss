@@ -1,0 +1,32 @@
+html, body {
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  transition: font-size 1s;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  font-family: $body-font;
+}
+
+.highlight {
+  color: $teal-grey;
+}
+
+.CTA {
+  color: $orange;
+}
