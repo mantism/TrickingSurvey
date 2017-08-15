@@ -2,41 +2,51 @@
   .Map {
     margin: 0 auto;
     width: 90%;
-    height: 0;
+    height: 90%;
     position: relative;
     top: 0;
     left: 0;
-
+   
     svg {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
+      border: 1px solid #888;
     }
+
+    .tooltip {
+      position: absolute;           
+	    text-align: center;           
+	    width: 60px;                  
+	    height: 28px;                 
+	    padding: 2px; 
+    }
+  }
+
+  h3 {
+    margin-bottom: 0.25rem;
   }
 
   .content {
     position: relative;
     left: 0;
     @media (min-width: 25em) {
-      top: 10rem;
+      //top: 10rem;
     }
 
     @media (min-width: 35em) {
-      top: 15rem;
+      //top: 15rem;
     }
 
     @media (min-width: 45em) {
-      top: 20rem;
+      //top: 20rem;
     }
 
     @media (min-width: 60em) {
-      top: 24rem;
+      //top: 24rem;
     }
-    left: 0;
   }
 }
-
-
 
 .marker {
   opacity: 0.5;

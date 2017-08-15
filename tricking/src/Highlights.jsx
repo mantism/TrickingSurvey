@@ -14,8 +14,8 @@ class Highlights extends Component {
         <div className="content">
             In total, only 15 questions were asked. Some key highlights are:
             <ul>
-              <li> The most popular trick is <span className="highlight"> Cork </span></li>
-              <li> Although combo's weren't asked for, the most mentioned combo is <span className="highlight"> 
+              <li> The most popular trick was <span className="highlight"> Cork </span></li>
+              <li> Although combo's weren't asked for, the most mentioned combo was <span className="highlight"> 
                 Aerial -> front swing -> Raiz</span></li>
               <Image alt="cork" url={corkURL} size="medium"/>
               <Image alt="aerial_raiz" url={aerialRaizURL} size="medium"/>
@@ -29,7 +29,7 @@ class Highlights extends Component {
         <div className="content no-background">
            Obviously, this survey was not perfect. Along with the fact that only a small percentage of the 
            community responded, it was heavily biased against trickers who don't speak English. Hopefully, 
-           future surveys can yield a large sample pool and more diverse responses.
+           future surveys can yield a larger sample pool and more diverse responses.
            <br/>
         </div>
        
