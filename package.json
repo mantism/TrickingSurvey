@@ -1,27 +1,31 @@
 {
-  "name": "trickingdata",
-  "version": "1.0.0",
-  "description": "tricking data viz",
-  "main": "app.js",
+  "name": "tricking",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "d3-sankey": "^0.2.1",
-    "datamaps": "^0.5.1",
-    "express": "^4.13.4",
-    "progressbar.js": "^1.0.1",
-    "requirejs": "^2.2.0"
+    "d3-array": "^1.2.0",
+    "d3-axis": "^1.0.8",
+    "d3-scale": "^1.0.6",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10",
+    "react-tooltip": "^3.3.0"
   },
-  "devDependencies": {},
   "scripts": {
-        
+    "build-css": "node-sass-chokidar src/styles/styles.scss -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/styles/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mantism/TrickingData.git"
+  "devDependencies": {
+    "d3-geo": "^1.6.4",
+    "d3-selection": "^1.1.0",
+    "lodash": "^4.17.4"
   },
-  "author": "Mikael Mantis",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mantism/TrickingData/issues"
-  },
-  "homepage": "https://github.com/mantism/TrickingData"
+  "homepage": "mantism.github.io/TrickingSurvey2016"
 }

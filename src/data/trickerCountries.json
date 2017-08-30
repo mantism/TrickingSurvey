@@ -1,0 +1,296 @@
+{
+  "ATG": {
+    "iso": "ATG",
+    "numTrickers": "2",
+    "lat": "17.060816",
+    "lng": "-61.796428" 
+  },
+  "ARG": {
+    "iso": "ARG",
+    "numTrickers": "2",
+    "lat": "-38.416097",
+    "lng": "-63.616672"
+  },
+  "AUS": {
+    "iso": "AUS",
+    "numTrickers": "13",
+    "lat": "-25.274398",
+    "lng": "133.775136"
+  },
+  "AUT": {
+    "iso": "AUT",
+    "numTrickers": "5",
+    "lat": "47.516231",
+    "lng": "14.550072"
+  },
+  "AZE": {
+    "iso": "AZE",
+    "numTrickers": "1",
+    "lat": "40.143105",
+    "lng": "47.576927"
+  },
+  "BEL": {
+    "iso": "BEL",
+    "numTrickers": "1",
+    "lat": "50.503887",
+    "lng": "4.469936"
+  },
+  "BRA": {
+    "iso": "BRA",
+    "numTrickers": "3",
+    "lat": "-14.235004",
+    "lng": "-51.92528"
+  },
+  "CAN": {
+    "iso": "CAN",
+    "numTrickers": "16",
+    "lat": "56.130366",
+    "lng": "-106.346771"
+  },
+  "CHL": {
+    "iso": "CHL",
+    "numTrickers": "2",
+    "lat": "-35.675147",
+    "lng": "-71.542969"
+  },
+  "CRI": {
+    "iso": "CRI",
+    "numTrickers": "1",
+    "lat": "9.748917",
+    "lng": "-83.753428"
+  },
+  "CZE": {
+    "iso": "CZE",
+    "numTrickers": "16",
+    "lat": "49.817492",
+    "lng": "15.472962"
+  },
+  "DNK": {
+    "iso": "DNK",
+    "numTrickers": "1",
+    "lat": "56.26392",
+    "lng": "9.501785"
+  },
+  "EST": {
+    "iso": "EST",
+    "numTrickers": "1",
+    "lat": "58.595272",
+    "lng": "25.013607"
+  },
+  "FIN": {
+    "iso": "FIN",
+    "numTrickers": "4",
+    "lat": "61.92411",
+    "lng": "25.748151"
+  },
+  "FRA": {
+    "iso": "FRA",
+    "numTrickers": "3",
+    "lat": "46.227638",
+    "lng": "2.213749"
+  },
+  "DEU": {
+    "iso": "DEU",
+    "numTrickers": "31",
+    "lat": "51.165691",
+    "lng": "10.451526"
+  },
+  "GRC": {
+    "iso": "GRC",
+    "numTrickers": "4",
+    "lat": "39.074208",
+    "lng": "21.824312"
+  },
+  "GTM": {
+    "iso": "GTM",
+    "numTrickers": "1",
+    "lat": "15.783471",
+    "lng": "-90.230759"
+  },
+  "HKG": {
+    "iso": "HKG",
+    "numTrickers": "1",
+    "lat": "22.396428",
+    "lng": "114.109497"
+  },
+  "HUN": { 
+    "iso": "HUN",
+    "numTrickers": "1",
+    "lat": "47.162494",
+    "lng": "19.503304"
+  },
+  "IND": {
+    "iso": "IND",
+    "numTrickers": "2",
+    "lat": "20.593684",
+    "lng": "78.96288"
+  },
+  "IRL": {
+    "iso": "IRL",
+    "numTrickers": "2",
+    "lat": "53.41291",
+    "lng": "-8.24389"
+  },
+  "ISR": {
+    "iso": "ISR",
+    "numTrickers": "7",
+    "lat": "31.046051",
+    "lng": "34.851612"
+  },
+  "ITA": {
+    "iso": "ITA",
+    "numTrickers": "3",
+    "lat": "41.87194",
+    "lng": "12.56738"
+  },
+  "JAM": {
+    "iso": "JAM",
+    "numTrickers": "1",
+    "lat": "18.109581",
+    "lng": "-77.297508"
+  },
+  "KOR": {
+    "iso": "KOR",
+    "numTrickers": "1",
+    "lat": "35.907757",
+    "lng": "127.766922"
+  },
+  "LTU": {
+    "iso": "LTU",
+    "numTrickers": "7",
+    "lat": "55.169438",
+    "lng": "23.881275"
+  },
+  "MYS": {
+    "iso": "MYS",
+    "numTrickers": "2",
+    "lat": "03.09",
+    "lng": "101.41"
+  },
+  "MUS": {
+    "iso": "MUS",
+    "numTrickers": "1",
+    "lat": "-20.10",
+    "lng": "57.30"
+  },
+  "MEX": {
+    "iso": "MEX",
+    "numTrickers": "2",
+    "lat": "19.20",
+    "lng": "-99.10"
+  },
+  "MAR": {
+    "iso": "MAR",
+    "numTrickers": "4",
+    "lat": "31.79",
+    "lng": "-7.09"
+  },
+  "NLD": {
+    "iso": "NLD",
+    "numTrickers": "7",
+    "lat": "52.23",
+    "lng": "4.54"
+  },
+  "NZL": {
+    "iso": "NZL",
+    "numTrickers": "2",
+    "lat": "-41.19",
+    "lng": "174.46"
+  },
+  "NOR": {
+    "iso": "NOR",
+    "numTrickers": "9",
+    "lat": "59.55",
+    "lng": "10.45"
+  },
+  "PER": {
+    "iso": "PER",
+    "numTrickers": "1",
+    "lat": "-12.00",
+    "lng": "-77.00"
+  },
+  "PRT": {
+    "iso": "PRT",
+    "numTrickers": "1",
+    "lat": "38.42",
+    "lng": "-9.10"
+  },
+  "ROU": {
+    "iso": "ROU",
+    "numTrickers": "1",
+    "lat": "44.27",
+    "lng": "26.10"
+  },
+  "SRB": {
+    "iso": "SRB",
+    "numTrickers": "1",
+    "lat": "44.01",
+    "lng": "21.00"
+  },
+  "SGP": {
+    "iso": "SGP",
+    "numTrickers": "3",
+    "lat": "1.35",
+    "lng": "103.81"
+  },
+  "SVK": {
+    "iso": "SVK",
+    "numTrickers": "1",
+    "lat": "48.10",
+    "lng": "17.07"
+  },
+  "ZAF": {
+    "iso": "ZAF",
+    "numTrickers": "1",
+    "lat": "-25.44",
+    "lng": "28.12"
+  },
+  "ESP": {
+    "iso": "ESP",
+    "numTrickers": "4",
+    "lat": "40.25",
+    "lng": "-3.45"
+  },
+  "SWE": {
+    "iso": "SWE",
+    "numTrickers": "8",
+    "lat": "59.20",
+    "lng": "18.03"
+  },
+  "CHE": {
+    "iso": "CHE",
+    "numTrickers": "3",
+    "lat": "46.57",
+    "lng": "7.28"
+  },
+  "THA": {
+    "iso": "THA",
+    "numTrickers": "2",
+    "lat": "13.45",
+    "lng": "100.35"
+  },
+  "TUN": {
+    "iso": "TUN",
+    "numTrickers": "3",
+    "lat": "36.50",
+    "lng": "10.11"
+  },
+  "GBR": {
+    "iso": "GBR",
+    "numTrickers": "11",
+    "lat": "51.36",
+    "lng": "-0.05"
+  },
+  "USA": {
+    "iso": "USA",
+    "numTrickers": "134",
+    "lat": "37.09024",
+    "lng": "-95.712891"
+  },
+  "URY": {
+    "iso": "URY",
+    "numTrickers": "3",
+    "lat": "-34.50",
+    "lng": "-56.11"  
+  }
+ }
