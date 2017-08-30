@@ -20,12 +20,19 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "d3-geo": "^1.6.4",
     "d3-selection": "^1.1.0",
+    "gh-pages": "^1.0.0",
     "lodash": "^4.17.4"
   },
-  "homepage": "mantism.github.io/TrickingSurvey2016"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mantism/TrickingWiki.git"
+  },
+  "homepage": "mantism.github.io/TrickingWiki"
 }
