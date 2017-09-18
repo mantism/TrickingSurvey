@@ -5,7 +5,7 @@ class About extends Component {
   render() {
     return (
       <div className="About section">
-        <h1>About</h1>
+        <h1>Overview</h1>
         <Divider/>
         <div className="content">
           In 2016, a survey was sent out to the Tricking community via several Tricking related 

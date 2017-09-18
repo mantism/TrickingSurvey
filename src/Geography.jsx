@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
 
 import world from './data/world.js';
 import trickerCountries from './data/trickerCountries.json';
@@ -15,52 +14,15 @@ class Geography extends Component {
   constructor() {
     super();
 
-    const tooltipDisplayBools = this.prepareTooltips();
-
     this.state = {
       listHidden: true,
-      displayBools: tooltipDisplayBools,
-      selectedISO: '',
     }
 
     this.toggleCountryList = this.toggleCountryList.bind(this);
-    this.handleMarkerEnter = this.handleMarkerEnter.bind(this);
-    this.handleMarkerLeave = this.handleMarkerLeave.bind(this);
-  }
-
-  prepareTooltips() {
-    const displayBools = _.map(trickerCountries, country => {
-      return (
-        {
-          iso: country.iso,
-          display: false
-      });
-    });
-    return displayBools;
   }
 
   toggleCountryList() {
     this.setState({listHidden: !this.state.listHidden});
-  }
-
-  handleMarkerEnter(iso) {
-    this.handleMarkerInteraction(iso, true);
-  }
-
-  handleMarkerLeave(iso) {
-    this.handleMarkerInteraction(iso, false);
-  }
-
-  handleMarkerInteraction(iso, bool) {
-    const idx = _.findIndex(this.state.displayBools, (c) => {
-      return c.iso === iso;
-    });
-    let bools = this.state.displayBools;
-    bools[idx].display = bool;
-    this.setState({
-      displayBools: bools,
-      selectedISO: iso
-    });
   }
 
   render() {
@@ -98,8 +60,6 @@ class Geography extends Component {
                     fill={color} 
                     stroke='#191970'
                     className='marker'
-                    onMouseEnter={() => this.handleMarkerEnter(d.id)}
-                    onMouseLeave={() => this.handleMarkerLeave(d.id)}
                     data-tip={toolTipVal}
                     />
               </g>      

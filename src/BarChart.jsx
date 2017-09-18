@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { scaleLinear, scaleBand } from 'd3-scale';
-import { range } from 'd3-array';
-import { axisBottom, axisRight } from 'd3-axis';
+import Axes from './Axes';
 
 import _ from 'lodash';
 
 class Bar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.colorScale = scaleLinear()
+      .domain([0, this.props.max])
+      .range(['#04B8FF', '#0584ba']);
+  }
+
   render() {
+    const scales = this.props.scales;
+    const margins = this.props.margins;
+    const height = this.props.height;
+    const point = this.props.point;
+    const {xScale, yScale} = scales;
+    const toolTipVal = point.id + ':\r\n' + point.val + ' trickers';
     return (
-			<rect fill={this.props.color} width={this.props.width} height={this.props.height}
-				x={this.props.offset} y={this.props.availableHeight - this.props.height}/>
+			<rect key={point.id} 
+          x={xScale(point.id)} 
+          y={yScale(point.val)} 
+          height={height - margins.bottom - yScale(point.val)}
+          width={xScale.bandwidth()}
+          fill={this.colorScale(point.val)}
+          data-tip={toolTipVal}
+        /> 
 		);
   }
 }
@@ -24,43 +43,81 @@ Bar.defaultProps = {
 }
 
 class BarChart extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      containerWidth: null,
+    }
+
+    this.fitParentContainer = this.fitParentContainer.bind(this);
+  }
+
+  componentDidMount() {
+    this.fitParentContainer();
+    window.addEventListener('resize', this.fitParentContainer);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.fitParentContainer);
+  }
+
+  fitParentContainer() {
+    const { containerWidth } = this.state;
+    const currentContainerWidth = this.container.getBoundingClientRect().width;
+    console.log(currentContainerWidth);
+    const shouldResize = containerWidth !== currentContainerWidth;
+    if (shouldResize) {
+      this.setState({
+        containerWidth: currentContainerWidth,
+      });
+    }
+  }
+
 	render() {
     const sortedData = _.sortBy(this.props.data, [(o) => {return o.val}]);
     const max = sortedData[sortedData.length - 1].val;
 
-    const width = this.props.width - this.props.margins.left - this.props.margins.right;
-    const height = this.props.height - this.props.margins.top - this.props.margins.bottom;
-    const xScale = scaleBand().rangeRound([0, width], 0.1).domain(range(this.props.data.length));
-    const yScale = scaleLinear().range([0, height]).domain([0, max]);
+    const width = Math.max(this.state.containerWidth, this.props.width);
+    const height = this.props.height;
+
+    const xScale = scaleBand()
+      .padding(0.5)
+      .domain(this.props.data.map(d => d.id))
+      .range([this.props.margins.left, width - this.props.margins.right]);
+
+    const yScale = scaleLinear()
+      .domain([0, max])
+      .range([height - this.props.margins.bottom, this.props.margins.top]);
 
     const bars = _.map(this.props.data, (point, i) => {
       return (
-        <Bar width={25} height={yScale(point.val)} availableHeight={height} 
-          offset={xScale(i)} color={this.props.color} key={i}/>
+        <Bar key={point.id}
+             max={max}
+             scales={{xScale, yScale}}
+             margins={this.props.margins}
+             point={point}
+             height={height}
+             
+        />
       )
     });
 
-    const divStyle = {
-      width,
-      height
-    }
-    const xAxis = axisBottom(xScale);
 		return (
-      <div className="barChart-section" style={divStyle}>
-			  <svg viewBox={`0 0 ${width} ${height}`} width={width} height={height}>
-				  {bars}
-          <g>
-            {xAxis}
-          </g>
-			  </svg>
+      <div className="barChart-section" ref={(el)=> { this.container = el}}>
+			  <svg viewBox={`0 0 ${width} ${height}`}>
+          <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} />
+          {bars}
+        </svg>
+        <ReactTooltip place='top' type='dark' effect='float'/>
       </div>
 		)
 	}
 }
 
 BarChart.defaultProps = {
-  width: 800,
-  height: 350,
+  width: 700,
+  height: 400,
   title: '',
   color: '#0584ba',
   margins: {

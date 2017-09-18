@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import BarChart from './BarChart';
 import data from './data/discovery.json';
+import Divider from './Divider';
+
 class Discovery extends Component {
   render() {
     const margins = {
-      left: 0,
+      left: 60,
       top: 0,
-      right: 0,
-      bottom: 0,
+      right: 20,
+      bottom: 100,
     }
 
     return (
-      <div className="discovery-chart-section">
+      <div className="Discovery section">
+        <h1>Discovery</h1>
+        <Divider size={3}/>
+        <h3>How did Trickers discover tricking?</h3>
         <BarChart width={this.props.width} height={this.props.height} data={data}
           margins={margins}/>
       </div>
@@ -20,8 +25,8 @@ class Discovery extends Component {
 }
 
 Discovery.defaultProps = {
-  width: 500,
-  height: 250,
+  width: 700,
+  height: 500,
 }
 
 export default Discovery;
