@@ -10,7 +10,7 @@ class Highlights extends Component {
     return (
       <div className="Highlights section">
         <h1>Highlights</h1>
-        <Divider size={1}/>
+        <Divider size={3}/>
         <div className="content">
             In total, only 15 questions were asked. Some key highlights are:
             <ul>

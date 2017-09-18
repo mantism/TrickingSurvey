@@ -65,7 +65,7 @@ class BarChart extends Component {
   fitParentContainer() {
     const { containerWidth } = this.state;
     const currentContainerWidth = this.container.getBoundingClientRect().width;
-    console.log(currentContainerWidth);
+    
     const shouldResize = containerWidth !== currentContainerWidth;
     if (shouldResize) {
       this.setState({
@@ -79,7 +79,7 @@ class BarChart extends Component {
     const max = sortedData[sortedData.length - 1].val;
 
     const width = Math.max(this.state.containerWidth, this.props.width);
-    const height = this.props.height;
+    const height = this.props.width * (5/7);
 
     const xScale = scaleBand()
       .padding(0.5)
@@ -104,7 +104,7 @@ class BarChart extends Component {
     });
 
 		return (
-      <div className="barChart-section" ref={(el)=> { this.container = el}}>
+      <div className="barChart-section" ref={(el)=> { this.container = el}} style={{height}}>
 			  <svg viewBox={`0 0 ${width} ${height}`}>
           <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} />
           {bars}
@@ -117,7 +117,7 @@ class BarChart extends Component {
 
 BarChart.defaultProps = {
   width: 700,
-  height: 400,
+  height: 500,
   title: '',
   color: '#0584ba',
   margins: {

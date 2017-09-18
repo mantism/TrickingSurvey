@@ -1,9 +1,11 @@
 .barChart-section {
   margin: 0 auto;
   position: relative;
+  width: 100%;
+  display: inline-block;
+  max-height: 500px;
 
   svg {
-    display: inline-block;
     position: absolute;
   }
 }
@@ -22,4 +24,3 @@
   transform: rotate(-45deg);
   text-anchor: end;
 }
-

@@ -3,7 +3,7 @@ import Header from './Header';
 import About from './About';
 import Highlights from './Highlights';
 import Geography from './Geography';
-import Discovery from './Discovery';
+import Experience from './Experience';
 
 import './styles.css';
 
@@ -15,7 +15,7 @@ class App extends Component {
         <About />
         <Highlights />
         <Geography />
-        <Discovery />
+        <Experience />
       </div>
     );
   }
