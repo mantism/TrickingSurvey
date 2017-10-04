@@ -1,0 +1,61 @@
+.icons {
+  padding: 0; }
+
+.icon {
+  display: inline-block; }
+
+.gainer {
+  margin-left: 10px;
+  margin-right: 10px;
+  animation: play 2s steps(40) infinite; }
+
+.wheel {
+  margin-left: 10px;
+  margin-right: 10px;
+  animation: spin 5.0s linear infinite; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@media (min-width: 25em) {
+  .icon {
+    width: 32px;
+    height: 32px; }
+  .gainer {
+    background: url("./images/gainer-sprite32.svg"); }
+  .nodes {
+    background: url("./images/nodes32.svg"); }
+  .pie {
+    background: url("./images/piechart32.svg"); }
+  .wheel {
+    background: url("./images/wheel32.svg"); }
+  .calendar {
+    background: url("./images/calendar32.svg"); }
+  .kick {
+    background: url("./images/kick32.svg"); }
+  @keyframes play {
+    100% {
+      background-position: 0 -1280px; } } }
+
+@media (min-width: 40em) {
+  .icon {
+    width: 64px;
+    height: 64px; }
+  .gainer {
+    background: url("./images/gainer-sprite64.svg"); }
+  .nodes {
+    background: url("./images/nodes64.svg"); }
+  .pie {
+    background: url("./images/piechart64.svg"); }
+  .wheel {
+    background: url("./images/wheel64.svg"); }
+  .calendar {
+    background: url("./images/calendar64.svg"); }
+  .kick {
+    background: url("./images/kick.svg"); }
+  @keyframes play {
+    100% {
+      background-position: 0 -2560px; } } }

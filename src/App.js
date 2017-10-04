@@ -11,11 +11,13 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Header />
+        <Header title="Tricking Survey Results" subheading="2016" 
+          icons={["pie", "gainer", "nodes"]}/>
         <About />
         <Highlights />
         <Geography />
         <Experience />
+        <Header title="Still in development!" subheading="You can reach me @ mikael.mantis7 at gmail.com" icons={["gainer"]}/>
       </div>
     );
   }

@@ -12,47 +12,12 @@
   transition: height 1s;
 }
 
-.icons {
-  padding: 0;
-}
-
-.icon {
-  display: inline-block;
-}
-
-.gainer {
-  margin-left: 10px;
-  margin-right: 10px;
-  animation: play 2.0s steps(40) infinite;
-}
-
 @media (min-width: 25em) {
   .header {
     height: 12rem;
     h1 {
       font-size: 2rem;
     }
-  }
-
-  .icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  .gainer {
-    background: url('./images/gainer-sprite32.svg');
-  }
-
-  .nodes {
-    background: url('./images/nodes32.svg');
-  }
-
-  .pie {
-    background: url('./images/piechart32.svg')
-  }
-
-  @keyframes play {
-    100% { background-position: 0 -1280px; }
   }
 }
 
@@ -63,28 +28,4 @@
       font-size: 3rem;
     }
   }
-
-  .icon {
-    width: 64px;
-    height: 64px;
-  }
-
-  .gainer {
-    background: url('./images/gainer-sprite64.svg');
-  }
-
-  .nodes {
-    background: url('./images/nodes64.svg');
-  }
-
-  .pie {
-    background: url('./images/piechart64.svg');
-  }
-
-  @keyframes play {
-   100% { background-position: 0 -2560px; }
-  }
 }
-
-
-

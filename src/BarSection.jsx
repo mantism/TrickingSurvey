@@ -5,7 +5,7 @@ import Divider from './Divider';
 class BarSection extends Component {
   render() {
     const margins = {
-      left: 100,
+      left: 120,
       top: 0,
       right: 100,
       bottom: 70
@@ -19,6 +19,7 @@ class BarSection extends Component {
         <h3> {this.props.description} </h3>
         <BarChart width={this.props.width} height={this.props.height} data={this.props.data}
                   margins={margins} />
+        {this.props.children}
       </div>
     )
   }
