@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import BarSection from './BarSection'
+import YearsVsHours from './YearsVsHours';
 import Header from './Header';
 import discoveryData from './data/discovery.json';
 import yearsData from './data/yearsTricking.json';
 import trainingData from './data/trainingHours.json';
 import gatheringData from './data/gatherings.json';
+import allData from './data/trickingsurveyresults.json';
 
 class Experience extends Component {
   render() {
@@ -34,6 +36,8 @@ class Experience extends Component {
             <BarSection data={trainingData} class="Training" description="How many hours a week do they train?"/>
             <BarSection data={gatheringData} class="Gatherings" description="How many gatherings have they attended?"/>
           </div>
+          <YearsVsHours data={allData} class="Years-Hours"/>
+          
         </div>
       </div>
     );

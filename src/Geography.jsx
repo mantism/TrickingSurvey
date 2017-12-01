@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
-import ReactTooltip from 'react-tooltip';
 
 import world from './data/world.js';
 import trickerCountries from './data/trickerCountries.json';
@@ -109,7 +108,6 @@ class Geography extends Component {
           </HiddenContent>
           </div>
         </div>
-        <ReactTooltip place='top' type='dark' effect='float'/>
       </div>
     );
   }

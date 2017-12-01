@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactTooltip from 'react-tooltip';
 import { scaleLinear, scaleBand } from 'd3-scale';
 import Axes from './Axes';
 
@@ -106,10 +105,12 @@ class BarChart extends Component {
 		return (
       <div className="barChart-section" ref={(el)=> { this.container = el}} style={{height}}>
 			  <svg viewBox={`0 0 ${width} ${height}`}>
-          <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} />
+          <Axes scales={{xScale, yScale}} margins={this.props.margins} 
+            svgHeight={height} svgWidth={width}
+            xLabel="testingXLabel" yLabel="testingYLabel" />
           {bars}
         </svg>
-        <ReactTooltip place='top' type='dark' effect='float'/>
+        
       </div>
 		)
 	}

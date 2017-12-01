@@ -1,7 +1,7 @@
 import React from 'react';
 import Axis from './Axis';
 
-const Axes = ({scales, margins, svgHeight, svgWidth}) => {
+const Axes = ({scales, margins, svgHeight, svgWidth, xLabel, yLabel}) => {
   const height = svgHeight;
   const width = svgWidth;
 
@@ -10,6 +10,7 @@ const Axes = ({scales, margins, svgHeight, svgWidth}) => {
     scale: scales.xScale,
     translate: `translate(0, ${height - margins.bottom})`,
     tickSize: height - margins.top - margins.bottom,
+    label: xLabel,
   }
 
   const yProps = {
@@ -17,6 +18,7 @@ const Axes = ({scales, margins, svgHeight, svgWidth}) => {
     scale: scales.yScale,
     translate: `translate(${margins.left}, 0)`,
     tickSize: width - margins.left - margins.right,
+    label: yLabel
   }
 
   return (
