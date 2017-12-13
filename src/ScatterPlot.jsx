@@ -12,19 +12,31 @@ class ScatterPlot extends Component {
       containerWidth: null,
     }
 
+    this.counts = this.aggregateData();
     this.getXScale = this.getXScale.bind(this);
     this.getYScale = this.getYScale.bind(this);
   }
+
+  aggregateData() {
+    let counts = new Map();
+    for (let d of this.props.data) {
+      let str = d.numYearsTricking + ' ' + d.numGatherings;
+      if (counts.has(str)) {
+        counts.set(str, counts.get(str) + 1);
+      } else {
+        counts.set(str, 1);
+      }
+    }
+    return counts;
+    
+  }
+
   //need to figure out how to map, sort, and reduce all the values
   getXScale() {
     let domainValues = _.map(this.props.data, (d) => d.numYearsTricking);
     let sortedVals = _.sortBy(domainValues, [(d) => {
       let rank = consts.yearsRank[d];
-      if (rank) {
-        return rank;
-      } else {
-        return 8;
-      }
+      return (rank) ? rank : 8;
       
     }]);
 
@@ -35,9 +47,9 @@ class ScatterPlot extends Component {
   }
 
   getYScale() {
-    let domainValues = _.map(this.props.data, (d) => d.numHoursPerWeek);
+    let domainValues = _.map(this.props.data, (d) => d.numGatherings);
     let sortedVals = _.sortBy(domainValues, [(d) => {
-      let rank = consts.hoursRank[d];
+      let rank = consts.gatherRank[d];
       return (rank) ? rank : 8;
     }])
 
@@ -53,15 +65,18 @@ class ScatterPlot extends Component {
     const height = this.props.height;
     const width = this.props.width;
 
-    const circles = _.map(this.props.data, (point, i) => {      
+    const circles = _.map(this.props.data, (point, i) => {
+      const str = point.numYearsTricking + ' ' + point.numGatherings;
+      const numTrickers = this.counts.get(str);
+      const dataStr = numTrickers + ' trickers : ' + point.numYearsTricking + ' years ' + point.numGatherings + ' gatherings';      
       return (
         <circle key={i}
           cx={xScale(point.numYearsTricking)}
-          cy={yScale(point.numHoursPerWeek)}
+          cy={yScale(point.numGatherings)}
           r={10}
           fill='#0584ba'
           fillOpacity='0.1'
-          data-tip={point.numYearsTricking + " years " + point.numHoursPerWeek + " hours per week" }
+          data-tip={dataStr}
         />
       );
     });
