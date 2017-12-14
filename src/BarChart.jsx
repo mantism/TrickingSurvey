@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { scaleLinear, scaleBand } from 'd3-scale';
 import Axes from './Axes';
-
 import _ from 'lodash';
 
 class Bar extends Component {
@@ -103,7 +102,7 @@ class BarChart extends Component {
     });
 
 		return (
-      <div className="barChart-section" ref={(el)=> { this.container = el}} style={{height}}>
+      <div className="chart-section" ref={(el)=> { this.container = el}} style={{height}}>
 			  <svg viewBox={`0 0 ${width} ${height}`}>
           <Axes scales={{xScale, yScale}} margins={this.props.margins} 
             svgHeight={height} svgWidth={width}

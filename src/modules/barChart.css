@@ -1,10 +1,10 @@
-.barChart-section {
+.chart-section {
   margin: 0 auto;
   position: relative;
   width: 100%;
   display: inline-block;
   max-height: 500px; }
-  .barChart-section svg {
+  .chart-section svg {
     position: absolute; }
 
 .Axis path,

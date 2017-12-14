@@ -15,6 +15,28 @@ class ScatterPlot extends Component {
     this.counts = this.aggregateData();
     this.getXScale = this.getXScale.bind(this);
     this.getYScale = this.getYScale.bind(this);
+    this.fitParentContainer = this.fitParentContainer.bind(this);
+  }
+
+  componentDidMount() {
+    this.fitParentContainer();
+    window.addEventListener('resize', this.fitParentContainer);
+  }
+
+  componentWillMount() {
+    window.removeEventListener('resize', this.fitParentContainer);
+  }
+
+  fitParentContainer() {
+    const { containerWidth } = this.state;
+    const currentContainerWidth = this.container.getBoundingClientRect().width;
+    
+    const shouldResize = containerWidth !== currentContainerWidth;
+    if (shouldResize) {
+      this.setState({
+        containerWidth: currentContainerWidth,
+      });
+    }
   }
 
   aggregateData() {
@@ -32,7 +54,7 @@ class ScatterPlot extends Component {
   }
 
   //need to figure out how to map, sort, and reduce all the values
-  getXScale() {
+  getXScale(width) {
     let domainValues = _.map(this.props.data, (d) => d.numYearsTricking);
     let sortedVals = _.sortBy(domainValues, [(d) => {
       let rank = consts.yearsRank[d];
@@ -43,10 +65,10 @@ class ScatterPlot extends Component {
     return scaleBand()
       .padding(this.props.padding)
       .domain(sortedVals)
-      .range([this.props.padding, (this.props.width)]);
+      .range([this.props.margins.left, width - this.props.margins.left]);
   }
 
-  getYScale() {
+  getYScale(height) {
     let domainValues = _.map(this.props.data, (d) => d.numGatherings);
     let sortedVals = _.sortBy(domainValues, [(d) => {
       let rank = consts.gatherRank[d];
@@ -56,14 +78,14 @@ class ScatterPlot extends Component {
     return scaleBand()
       .padding(this.props.padding)
       .domain(sortedVals)
-      .range([this.props.height - this.props.padding, this.props.padding]);
+      .range([height - this.props.margins.bottom, this.props.margins.top]);
   }
 
   render() {
-    const xScale = this.getXScale();
-    const yScale = this.getYScale();
-    const height = this.props.height;
-    const width = this.props.width;
+    const width = Math.max(this.state.containerWidth, this.props.width);
+    const height = this.props.width * (5/7);
+    const xScale = this.getXScale(width);
+    const yScale = this.getYScale(height);
 
     const circles = _.map(this.props.data, (point, i) => {
       const str = point.numYearsTricking + ' ' + point.numGatherings;
@@ -82,8 +104,8 @@ class ScatterPlot extends Component {
     });
 
     return (
-      <div className="scatterPlot-section">
-        <svg width={width} height={height}>
+      <div className="chart-section" ref={(el)=> { this.container = el}} style={{height}}>
+        <svg viewBox={`0 0 ${width} ${height}`}>
           {circles}
           <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} />
         </svg>

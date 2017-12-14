@@ -34,7 +34,7 @@ class Experience extends Component {
             </BarSection>
             <BarSection data={yearsData} class="Years" description="How long have they been tricking?"/>
             <BarSection data={trainingData} class="Training" description="How many hours a week do they train?"/>
-            <YearsVsGatherings data={allData} class="Years-Hours"/>
+            <YearsVsGatherings data={allData} class="Years-Gatherings"/>
           </div>
           
           
