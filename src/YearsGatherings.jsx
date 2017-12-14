@@ -8,7 +8,9 @@ class YearsVsGatherings extends Component {
     return (
       <div className={classNames}>
         <h3> # of Years Tricking vs # of Gatherings Attended </h3>
-        <ScatterPlot data={this.props.data} class={this.props.class}/>
+        <ScatterPlot data={this.props.data} class={this.props.class}
+          xlabel="Years Tricking" ylabel="Gatherings Attended"
+        />
       </div>
     )
   }

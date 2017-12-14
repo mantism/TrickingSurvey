@@ -21,10 +21,15 @@ class Axis extends Component {
 
   render() {
     return (
-      <g className={`Axis Axis-${this.props.orient}`}
-         ref={(el) => { this.axisElement = el;}}
-         transform={this.props.translate}
-      />
+      <svg>
+        <g className={`Axis Axis-${this.props.orient}`}
+          ref={(el) => { this.axisElement = el;}}
+          transform={this.props.translate}
+        />
+        <text x='0' y='35' transform={`${this.props.transformLabel}`}>
+          {this.props.label}
+        </text>
+      </svg>
     )
   }
 }

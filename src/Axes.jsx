@@ -11,6 +11,7 @@ const Axes = ({scales, margins, svgHeight, svgWidth, xLabel, yLabel}) => {
     translate: `translate(0, ${height - margins.bottom})`,
     tickSize: height - margins.top - margins.bottom,
     label: xLabel,
+    transformLabel: `translate(${width / 2 - margins.left / 2}, ${height - margins.bottom / 2})`
   }
 
   const yProps = {
@@ -18,7 +19,8 @@ const Axes = ({scales, margins, svgHeight, svgWidth, xLabel, yLabel}) => {
     scale: scales.yScale,
     translate: `translate(${margins.left}, 0)`,
     tickSize: width - margins.left - margins.right,
-    label: yLabel
+    label: yLabel,
+    transformLabel: `translate(${margins.left / 2}, ${height / 2 - margins.bottom / 2}) rotate(-90 20,40)`
   }
 
   return (

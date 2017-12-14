@@ -96,7 +96,6 @@ class BarChart extends Component {
              margins={this.props.margins}
              point={point}
              height={height}
-             
         />
       )
     });
@@ -106,7 +105,7 @@ class BarChart extends Component {
 			  <svg viewBox={`0 0 ${width} ${height}`}>
           <Axes scales={{xScale, yScale}} margins={this.props.margins} 
             svgHeight={height} svgWidth={width}
-            xLabel="testingXLabel" yLabel="testingYLabel" />
+            xLabel={this.props.xlabel} yLabel={this.props.ylabel} />
           {bars}
         </svg>
         
@@ -121,10 +120,10 @@ BarChart.defaultProps = {
   title: '',
   color: '#0584ba',
   margins: {
-    top: 20,
-    right: 30,
-    bottom: 30,
-    left: 40
+    left: 120,
+    top: 25,
+    right: 100,
+    bottom: 90
   }
 }
 

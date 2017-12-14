@@ -97,7 +97,7 @@ class ScatterPlot extends Component {
           cy={yScale(point.numGatherings)}
           r={10}
           fill='#0584ba'
-          fillOpacity='0.1'
+          fillOpacity='0.05'
           data-tip={dataStr}
         />
       );
@@ -106,8 +106,10 @@ class ScatterPlot extends Component {
     return (
       <div className="chart-section" ref={(el)=> { this.container = el}} style={{height}}>
         <svg viewBox={`0 0 ${width} ${height}`}>
+          <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} 
+            xLabel={this.props.xlabel} yLabel={this.props.ylabel}
+          />
           {circles}
-          <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} />
         </svg>
       </div>
     );
@@ -120,9 +122,9 @@ ScatterPlot.defaultProps = {
   padding: 25,
   margins: {
     top: 20,
-    right: 30,
-    bottom: 30,
-    left: 40
+    right: 100,
+    bottom: 90,
+    left: 120
   }
 }
 
