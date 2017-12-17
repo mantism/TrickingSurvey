@@ -33,7 +33,7 @@ class Slice extends Component {
     return (
       <g onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
         <path d={arc(this.props.value)} fill={this.props.fill}
-          transform={`translate(${this.props.width / 2}, ${this.props.height / 3})`}
+          transform={`translate(${this.props.width / 2}, ${this.props.height / 2})`}
           data-tip={dataStr ? dataStr : ''}
         />
       </g>
@@ -82,7 +82,7 @@ class PieChart extends Component {
   render() {
     let dataVals = _.map(this.props.data, d => d.val);
     let pie = shape.pie()(dataVals);
-    let height = (5/7) * this.props.width;
+    let height = 2.25 * this.props.outerRadius;
     let slices = _.map(pie, (d, i) => {
       return (
         <Slice key={i} width={this.props.width} height={height}
@@ -93,8 +93,8 @@ class PieChart extends Component {
     });
 
     return (
-      <div className="chart-section" ref={(el)=> { this.container = el}} style={{height}}>
-			  <svg viewBox={`0 0 ${this.props.width} ${this.props.height}`}>
+      <div className="chart-section" ref={(el)=> { this.container = el}}>
+			  <svg viewBox={`0 0 ${this.props.width} ${height}`}>
           {slices}
           <Legend data={this.props.data} colorScale={this.colorScale} theme={this.props.theme}/>
         </svg>
@@ -105,7 +105,7 @@ class PieChart extends Component {
 }
 
 PieChart.defaultProps = {
-  outerRadius: 100,
+  outerRadius: 150,
   donut: false,
   width: 700,
   height: 500,

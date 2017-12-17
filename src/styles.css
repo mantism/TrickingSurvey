@@ -11,22 +11,26 @@ html, body {
   position: relative;
   width: 100%;
   display: inline-block;
-  max-height: 500px; }
+  max-height: 500px;
+  margin-bottom: 2rem; }
   .chart-section svg {
-    position: absolute; }
+    display: block;
+    max-height: 500px; }
 
 .Axis path,
 .Axis line {
   stroke: #8b8b8b; }
 
 .Axis text {
-  font-size: 11px;
+  font-size: 1rem;
   fill: black; }
 
 .Experience .Axis path,
-.Experience .Axis line,
-.Experience .Axis text {
+.Experience .Axis line {
   stroke: #f0ede7; }
+
+.Experience .Axis text {
+  fill: #f0ede7; }
 
 .Axis-Bottom text {
   transform: rotate(-45deg);
@@ -229,7 +233,7 @@ p {
   opacity: 0.5; }
 
 .section {
-  transition: padding 1s; }
+  transition: padding 0.5s; }
   @media (min-width: 25em) {
     .section {
       padding-left: 5rem;

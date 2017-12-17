@@ -4,9 +4,10 @@
   width: 100%;
   display: inline-block;
   max-height: 500px;
-
+  margin-bottom: 2rem;
   svg {
-    position: absolute;
+    display: block;
+    max-height: 500px;
   }
 }
 
@@ -16,15 +17,17 @@
 }
 
 .Axis text {
-  font-size: 11px;
+  font-size: 1rem;
   fill: black;
 }
 
 .Experience {
   .Axis path,
-  .Axis line,
-  .Axis text {
+  .Axis line {
     stroke: #f0ede7;
+  }
+  .Axis text {
+    fill: #f0ede7;
   }
 }
 

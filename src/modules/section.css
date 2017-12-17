@@ -1,5 +1,5 @@
 .section {
-  transition: padding 1s; }
+  transition: padding 0.5s; }
   @media (min-width: 25em) {
     .section {
       padding-left: 5rem;

@@ -27,10 +27,10 @@ class Experience extends Component {
           <div className="content" style={{"marginTop": "0"}}>
             <PieSection data={discoveryData} class="Discovery" description="How did Trickers discover tricking?" 
               donut theme={theme}>
-              <div className="section" style={{'marginBottom': '1.5rem'}}> 
+              <div style={{'marginBottom': '1.5rem'}}> 
                 <p><span className="highlight">The Internet, Martial Arts, and Parkour</span> make up the three most common ways of discovering tricking. 
                   This comes as no surprise since without Martial Arts, tricking would not exist and without the
-                  Internet it would not expanded outside of the martial arts community. As for parkour, it would make sense as
+                  Internet it would not have expanded outside of the martial arts community. As for parkour, it would make sense as
                   the sports are commonly intertwined with eachother. 
                 </p>
               </div>
@@ -51,9 +51,3 @@ class Experience extends Component {
 }
 
 export default Experience;
-
-/*
-<BarSection data={trainingData} class="Training" description="How many hours a week do they train?"
-              xlabel="Hours per Week" ylabel="Number of Trickers"
-            />
-*/
