@@ -11,7 +11,7 @@ class BarSection extends Component {
         <Divider size={3}/>
         <h3> {this.props.description} </h3>
         <BarChart width={this.props.width} height={this.props.height} data={this.props.data}
-          xlabel={this.props.xlabel} ylabel={this.props.ylabel}
+          xlabel={this.props.xlabel} ylabel={this.props.ylabel} theme={this.props.theme}
         />
         {this.props.children}
       </div>

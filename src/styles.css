@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand|Roboto");
+html, body {
+  background-color: #f0ede7; }
+
+.Experience {
+  background-color: #39393A;
+  color: #f0ede7; }
+
 .chart-section {
   margin: 0 auto;
   position: relative;
@@ -15,6 +22,11 @@
 .Axis text {
   font-size: 11px;
   fill: black; }
+
+.Experience .Axis path,
+.Experience .Axis line,
+.Experience .Axis text {
+  stroke: #f0ede7; }
 
 .Axis-Bottom text {
   transform: rotate(-45deg);
@@ -231,11 +243,6 @@ p {
       padding-left: 10rem;
       padding-right: 10rem; } }
   .section .content {
-    background-color: #f8f6f2;
     margin-top: 0.50rem;
     padding: 1rem;
-    margin-bottom: 0.50rem;
-    box-shadow: 5px 5px 5px #999; }
-    .section .content + .no-background {
-      background-color: white;
-      box-shadow: none; }
+    margin-bottom: 0.50rem; }

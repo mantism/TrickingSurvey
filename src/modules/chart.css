@@ -1,0 +1,25 @@
+.chart-section {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  max-height: 500px; }
+  .chart-section svg {
+    position: absolute; }
+
+.Axis path,
+.Axis line {
+  stroke: #8b8b8b; }
+
+.Axis text {
+  font-size: 11px;
+  fill: black; }
+
+.Experience .Axis path,
+.Experience .Axis line,
+.Experience .Axis text {
+  stroke: #f0ede7; }
+
+.Axis-Bottom text {
+  transform: rotate(-45deg);
+  text-anchor: end; }

@@ -107,7 +107,7 @@ class ScatterPlot extends Component {
       <div className="chart-section" ref={(el)=> { this.container = el}} style={{height}}>
         <svg viewBox={`0 0 ${width} ${height}`}>
           <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} 
-            xLabel={this.props.xlabel} yLabel={this.props.ylabel}
+            xLabel={this.props.xlabel} yLabel={this.props.ylabel} theme={this.props.theme}
           />
           {circles}
         </svg>

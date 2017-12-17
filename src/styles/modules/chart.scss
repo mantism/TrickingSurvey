@@ -20,6 +20,14 @@
   fill: black;
 }
 
+.Experience {
+  .Axis path,
+  .Axis line,
+  .Axis text {
+    stroke: #f0ede7;
+  }
+}
+
 .Axis-Bottom text {
   transform: rotate(-45deg);
   text-anchor: end;

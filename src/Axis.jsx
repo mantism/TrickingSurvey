@@ -3,6 +3,12 @@ import * as d3Axis from 'd3-axis';
 import {select as d3Select} from 'd3-selection';
 
 class Axis extends Component {
+  constructor(props) {
+    super(props);
+
+    this.fontColor = (this.props.theme === 'dark') ? '#f0ede7' : '#000';
+  }
+
   componentDidMount() {
     this.renderAxis();
   }
@@ -26,7 +32,8 @@ class Axis extends Component {
           ref={(el) => { this.axisElement = el;}}
           transform={this.props.translate}
         />
-        <text x='0' y='35' transform={`${this.props.transformLabel}`}>
+        <text x='0' y='35' transform={`${this.props.transformLabel}`}
+          fill={this.fontColor}>
           {this.props.label}
         </text>
       </svg>
