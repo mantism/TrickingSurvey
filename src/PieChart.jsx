@@ -24,18 +24,27 @@ class Slice extends Component {
   render() {
     let innerRadius = (this.props.donut) ? this.props.outerRadius - 20 : 0;
     let dataStr = (this.props.id) ? this.props.id + ': ' + this.props.value.value + ' trickers' : null;
-    let padAngle = (this.props.donut) ? .01 : 0;
+    let padAngle = .01;
     let outerRadius = (this.state.isHovered) ? this.props.outerRadius * 1.05 : this.props.outerRadius;
     let arc = shape.arc()
       .innerRadius(innerRadius)
       .outerRadius(outerRadius)
       .padAngle(padAngle);
+    let xOffSet = (this.props.float === 'left') ? this.props.width / 6 : this.props.width / 4;
+    let centroid = arc.centroid(this.props.value);
+    let label = (this.props.labels) ? 
+      <text transform={`translate(${xOffSet + centroid[0]}, ${centroid[1] + this.props.height / 2})`}
+        dy="0.1em" textAnchor="middle" fill="black" fontSize="0.5rem">
+        {this.props.id}
+      </text> : null;
+
     return (
       <g onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
         <path d={arc(this.props.value)} fill={this.props.fill}
-          transform={`translate(${this.props.width / 2}, ${this.props.height / 2})`}
+          transform={`translate(${xOffSet}, ${this.props.height / 2})`}
           data-tip={dataStr ? dataStr : ''}
         />
+        {label}
       </g>
     );
   }
@@ -82,21 +91,29 @@ class PieChart extends Component {
   render() {
     let dataVals = _.map(this.props.data, d => d.val);
     let pie = shape.pie()(dataVals);
-    let height = 2.25 * this.props.outerRadius;
+    let width = 2.25 * this.props.outerRadius;
+    let height = width;
+   
     let slices = _.map(pie, (d, i) => {
       return (
         <Slice key={i} width={this.props.width} height={height}
           value={d} fill={this.colorScale[i]} donut={this.props.donut}
-          id={this.props.data[i].id}
+          id={this.props.data[i].id} float={this.props.float}
+          outerRadius={this.props.outerRadius} labels={this.props.labels}
           />
       )
     });
 
     return (
       <div className="chart-section" ref={(el)=> { this.container = el}}>
-			  <svg viewBox={`0 0 ${this.props.width} ${height}`}>
+			  <svg viewBox={`0 0 ${width} ${height}`}>
           {slices}
-          <Legend data={this.props.data} colorScale={this.colorScale} theme={this.props.theme}/>
+          {!this.props.labels ? 
+            <Legend data={this.props.data} colorScale={this.colorScale} 
+              theme={this.props.theme}
+              xOffSet={(this.props.float === 'left') ? 30 : 0}/> 
+          : null
+          }
         </svg>
         
       </div>

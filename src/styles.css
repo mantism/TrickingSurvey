@@ -9,13 +9,12 @@ html, body {
 .chart-section {
   margin: 0 auto;
   position: relative;
-  width: 100%;
-  display: inline-block;
   max-height: 500px;
+  max-width: 700px;
   margin-bottom: 2rem; }
   .chart-section svg {
-    display: block;
-    max-height: 500px; }
+    max-height: 500px;
+    max-width: 700px; }
 
 .Axis path,
 .Axis line {
@@ -79,10 +78,10 @@ p {
   font-family: "Roboto", sans-serif; }
 
 .highlight {
-  color: #51848b; }
+  color: #FF8552; }
 
 .CTA {
-  color: #cd853f; }
+  color: #0584ba; }
 
 .caption {
   font-size: 0.8rem;
@@ -248,5 +247,25 @@ p {
       padding-right: 10rem; } }
   .section .content {
     margin-top: 0.50rem;
-    padding: 1rem;
-    margin-bottom: 0.50rem; }
+    padding: 1rem; }
+
+.left {
+  display: inline-block; }
+  @media (min-width: 32em) {
+    .left {
+      width: 100%; } }
+  @media (min-width: 40em) {
+    .left {
+      width: 40%; } }
+
+.right {
+  display: inline-block;
+  vertical-align: top; }
+  @media (min-width: 32em) {
+    .right {
+      width: 100%;
+      margin: 0px; } }
+  @media (min-width: 40em) {
+    .right {
+      width: 40%;
+      margin: 20px; } }

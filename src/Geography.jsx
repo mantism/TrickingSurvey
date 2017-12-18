@@ -84,9 +84,7 @@ class Geography extends Component {
         </div>);
 
     return (
-      <div className="Geography section">
-        <h1>Geography</h1>
-        <Divider size={2}/>
+      <div className="Geography">
         <h3>Where are trickers from?</h3>
         <div className="Map"> 
           <svg viewBox="0 0 800 350"> 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import About from './About';
 import Highlights from './Highlights';
-import Geography from './Geography';
+import Demographics from './Demographics';
 import Experience from './Experience';
 import ReactTooltip from 'react-tooltip';
 
@@ -16,7 +16,7 @@ class App extends Component {
           icons={["pie", "gainer", "nodes"]}/>
         <About />
         <Highlights />
-        <Geography />
+        <Demographics />
         <Experience />
         <Header title="Still in development!" subheading="Questions? You can reach me @ mikael.mantis7 at gmail.com" icons={["gainer"]}/>
         <ReactTooltip place='top' type='dark' effect='float'/>

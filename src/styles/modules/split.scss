@@ -1,0 +1,26 @@
+.left {
+  display: inline-block;
+
+  @media (min-width: 32em) {
+    width: 100%;
+  }
+
+  @media (min-width: 40em) {
+    width: 40%;
+  }
+}
+
+.right {
+  display: inline-block;
+  vertical-align: top;
+
+  @media (min-width: 32em) {
+    width: 100%;
+    margin: 0px;
+  }
+
+  @media (min-width: 40em) {
+    width: 40%;
+    margin: 20px;
+  }
+}

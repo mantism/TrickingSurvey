@@ -42,7 +42,7 @@ class ScatterPlot extends Component {
   aggregateData() {
     let counts = new Map();
     for (let d of this.props.data) {
-      let str = d.numYearsTricking + ' ' + d.numGatherings;
+      let str = d[this.props.x] + ' ' + d[this.props.y];
       if (counts.has(str)) {
         counts.set(str, counts.get(str) + 1);
       } else {
@@ -55,9 +55,9 @@ class ScatterPlot extends Component {
 
   //need to figure out how to map, sort, and reduce all the values
   getXScale(width) {
-    let domainValues = _.map(this.props.data, (d) => d.numYearsTricking);
+    let domainValues = _.map(this.props.data, (d) => d[this.props.x]);
     let sortedVals = _.sortBy(domainValues, [(d) => {
-      let rank = consts.yearsRank[d];
+      let rank = this.props.xRank[d];
       return (rank) ? rank : 8;
       
     }]);
@@ -69,9 +69,9 @@ class ScatterPlot extends Component {
   }
 
   getYScale(height) {
-    let domainValues = _.map(this.props.data, (d) => d.numGatherings);
+    let domainValues = _.map(this.props.data, (d) => d[this.props.y]);
     let sortedVals = _.sortBy(domainValues, [(d) => {
-      let rank = consts.gatherRank[d];
+      let rank = this.props.yRank[d];
       return (rank) ? rank : 8;
     }])
 
@@ -88,13 +88,13 @@ class ScatterPlot extends Component {
     const yScale = this.getYScale(height);
 
     const circles = _.map(this.props.data, (point, i) => {
-      const str = point.numYearsTricking + ' ' + point.numGatherings;
+      const str = point[this.props.x] + ' ' + point[this.props.y];
       const numTrickers = this.counts.get(str);
-      const dataStr = numTrickers + ' trickers : ' + point.numYearsTricking + ' years ' + point.numGatherings + ' gatherings';      
+      const dataStr = numTrickers + ' trickers : ' + point[this.props.x] + ' years ' + point[this.props.y] + ' gatherings';      
       return (
         <circle key={i}
-          cx={xScale(point.numYearsTricking)}
-          cy={yScale(point.numGatherings)}
+          cx={xScale(point[this.props.x])}
+          cy={yScale(point[this.props.y])}
           r={10}
           fill='#0584ba'
           fillOpacity='0.05'
