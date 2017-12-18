@@ -39,8 +39,22 @@ class Experience extends Component {
               xlabel="Years Tricking" ylabel="Number of Trickers"
               theme={theme}
             />
-            <YearsVsGatherings data={allData} class="Years-Gatherings" theme={theme}/>
-            <HoursTraining />
+            <YearsVsGatherings data={allData} class="Years-Gatherings" theme={theme}>
+              <div>
+                <p>A strong linear correlation is shown between the number of years someone has been tricking
+                  and the number of gatherings they've attended. However, no other correlation was found
+                  between how long someone has been tricking and other pieces of data such as how often they train 
+                  and how they discovered tricking.</p>
+              </div>
+            </YearsVsGatherings>
+            <HoursTraining>
+              <div>
+                <p>
+                  Some interesting training habits mentioned include training 20+ hours a week as well as 
+                  cross-training with calisthenics, bboying, meditation, and trampolining.
+                </p>
+              </div>
+            </HoursTraining>
           </div>
           
         </div>

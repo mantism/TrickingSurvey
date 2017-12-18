@@ -14,6 +14,7 @@ class YearsVsGatherings extends Component {
           x="numYearsTricking" y="numGatherings" xRank={consts.yearsRank}
           yRank={consts.gatherRank}
         />
+        {this.props.children}
       </div>
     )
   }

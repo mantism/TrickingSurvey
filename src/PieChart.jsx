@@ -37,7 +37,7 @@ class Slice extends Component {
         dy="0.1em" textAnchor="middle" fill="black" fontSize="0.5rem">
         {this.props.id}
       </text> : null;
-
+   
     return (
       <g onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
         <path d={arc(this.props.value)} fill={this.props.fill}

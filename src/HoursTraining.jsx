@@ -33,6 +33,7 @@ class HoursTraining extends Component {
           Number <br/> of <br/> Trickers
         </div>
         <img src={url} alt='Hours Training' style={imageStyles}/>
+        {this.props.children}
       </div>
     );
   }

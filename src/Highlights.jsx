@@ -23,7 +23,7 @@ class Highlights extends Component {
               <li> Approximately <span className="highlight">60%</span> of the respondents have been tricking 
               between <span className="highlight">1 and 5 years</span> </li>
               <li> <span className="highlight">116/365</span> said they discovered tricking through the internet </li>
-              <li> More trickers claimed to upload videos to YouTube than Instagram </li>
+              <li> More trickers claimed to upload videos to Instagram than YouTube</li>
             </ul>
         </div>
         <div className="content">
