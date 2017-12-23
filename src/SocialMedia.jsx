@@ -50,7 +50,7 @@ class SocialMedia extends Component {
     return (
       <div className="SocialMedia">
         <Divider size={3} />
-        <h3> {this.props.description} </h3>
+        <h2> {this.props.description} </h2>
         <div className="chart-section" style={{marginBottom: 0}}>
           <svg viewBox={`0 0 ${this.props.width} ${this.props.height}`}>
             <g>

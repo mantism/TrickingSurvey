@@ -8,7 +8,7 @@ class Gender extends Component {
     return (
       <div className="Gender">
         <Divider size={3}/>
-        <h3> What do trickers identify as? (gender) </h3>
+        <h2> What do trickers identify as? (gender) </h2>
         <div className="left">
           <PieChart data={genderData} class="Gender" float="left"
              outerRadius={100} theme="none" labels/>

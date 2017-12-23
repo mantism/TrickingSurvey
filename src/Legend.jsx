@@ -9,7 +9,7 @@ class Legend extends Component {
       return (
         <svg key={i}>
           <circle cx={20 + offset} cy={i * 21.5 + 20} r={6} fill={this.props.colorScale[i]}/>
-          <text x={40 + offset} y={i * 21.5 + 23} fontFamily={'Roboto'} fontSize={`0.6rem`}
+          <text x={40 + offset} y={i * 21.5 + 23} fontFamily={'Open Sans'} fontSize={`0.6rem`}
             fill={fontColor}>
             {d.id}
           </text>

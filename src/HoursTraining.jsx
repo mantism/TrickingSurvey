@@ -25,7 +25,7 @@ class HoursTraining extends Component {
     return (
       <div className='hours-training'>
         <Divider/>
-        <h3> How many hours a week do you train? </h3>
+        <h2> How many hours a week do you train? </h2>
         <div className='top-label' style={topStyles}>
           Hours per Week
         </div>

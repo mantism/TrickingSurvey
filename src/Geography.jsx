@@ -85,7 +85,7 @@ class Geography extends Component {
 
     return (
       <div className="Geography">
-        <h3>Where are trickers from?</h3>
+        <h2>Where are trickers from?</h2>
         <div className="Map"> 
           <svg viewBox="0 0 800 350"> 
             <g className="countries">

@@ -14,9 +14,6 @@ class Experience extends Component {
     
     return (
       <div className="Experience">
-        <Header title={'Experience'} subheading={'How did trickers discover tricking? How long have they been tricking? How often? Gatherings?!'}
-          icons={["calendar", "wheel", "kick"]}
-        />
         <div className="section">
           <div className="content">
               In the survey, several questions were asked related to tricker's

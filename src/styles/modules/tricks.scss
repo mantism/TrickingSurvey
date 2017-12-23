@@ -1,0 +1,46 @@
+.Tricks {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex: 1;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .card {
+    height: 20rem;
+    margin: 10px auto;
+    background-color: $off-white;
+    border-radius: 10px;
+    transition: top ease 0.5s;
+    position: relative;
+    top: 0;
+    box-shadow: 3px 3px 20px 6px #c9c9c9;
+    word-wrap: normal;
+    overflow: auto;
+    flex-basis: 17.5rem;
+    img {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-content {
+      margin: 5px;
+
+      h3 {
+        margin: 0 0 5px 0;
+        padding: 0;
+      }
+
+      .divider {
+        padding: 0;
+        top: 0;
+      }
+    }
+  }
+
+  .card:hover {
+    position: relative;
+    top: -10px;
+  }
+}

@@ -9,7 +9,7 @@ class BarSection extends Component {
     return (
       <div className={classNames}>
         <Divider size={3}/>
-        <h3> {this.props.description} </h3>
+        <h2> {this.props.description} </h2>
         <BarChart width={this.props.width} height={this.props.height} data={this.props.data}
           xlabel={this.props.xlabel} ylabel={this.props.ylabel} theme={this.props.theme}
         />

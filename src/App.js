@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Header title="Tricking Survey Results" subheading="2016" 
+        <Header className="top" title="Tricking Survey Results" subheading="2016" 
           icons={["pie", "gainer", "nodes"]}/>
         <About />
         <Highlights />

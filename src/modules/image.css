@@ -19,3 +19,6 @@
       .image-container img {
         height: 13.5rem;
         width: 24rem; } }
+
+.image-container.no-margs {
+  margin: 0; }

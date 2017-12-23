@@ -1,0 +1,7 @@
+.Tricks {
+  margin: 10 auto;
+  display: inline-flex;
+  width: 100%; }
+  .Tricks .card {
+    height: 16rem;
+    margin: auto; }

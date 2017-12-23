@@ -19,25 +19,27 @@ class Image extends Component {
   calcSize(size) {
     switch(size) {
       case 'small':
-        this.setState({height: '144rem', width: '256rem'});
+        this.setState({height: '10.08rem', width: '17.92rem'});
         break;
       case 'medium':
-        this.setState({height: '216rem', width: '384rem'});
+        this.setState({height: '14.4rem', width: '25.6rem'});
         break;
       case 'large':
-        this.setState({height: '288rem', width: '512rem'});
+        this.setState({height: '21.6rem', width: '38.4rem'});
         break;
       default: 
-        this.setState({height: '216rem', width: '384rem'});
+        this.setState({height: '14.4rem', width: '25.6rem'});
     }
   }
 
   render() {
-    //style
+
+    let classNames=`image-container ${this.props.noMargs ? 'no-margs' : ''}`
 
     return (
-      <div className="image-container">
-        <img src={this.state.url} alt={this.state.alt} />
+      <div className={classNames}>
+        <img src={this.state.url} alt={this.state.alt} 
+        style={{height: this.state.height, width: this.state.width}} />
       </div>
     )
   }

@@ -4,10 +4,12 @@ import Icons from './Icons';
 
 class Header extends Component {
   render() {
+    let classNames = "header " + this.props.className;
+
     return (
-      <div className="header">
+      <div className={classNames}>
         <h1>{this.props.title}</h1>
-        <h3>{this.props.subheading}</h3>
+        <h4>{this.props.subheading}</h4>
         <Icons icons={this.props.icons}/>
       </div>
     );

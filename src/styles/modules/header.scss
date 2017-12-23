@@ -12,12 +12,24 @@
   transition: height 1s;
 }
 
+/*.header.top {
+  background-image: url('./images/loopkicks2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}*/
+
 @media (min-width: 25em) {
   .header {
-    height: 12rem;
     h1 {
       font-size: 2rem;
     }
+  }
+}
+
+
+@media (min-width: 32em) {
+  .header {
+    height: 12rem;
   }
 }
 

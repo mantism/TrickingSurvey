@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
 html, body {
   background-color: #f0ede7; }
 
@@ -7,7 +7,7 @@ html, body {
   color: #f0ede7; }
 
 .Habits {
-  background-color: #c5c5c5; }
+  background-color: #F7FFF7; }
 
 .chart-section {
   margin: 0 auto;
@@ -61,24 +61,24 @@ html, body {
   background: #cd853f; }
 
 html, body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Open Sans ", sans-serif;
+  font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: font-size 1s; }
 
 h1 {
-  font-weight: bold;
   font-size: 2rem;
   margin-bottom: 0.35rem; }
 
-h3 {
+/*h3 {
   font-weight: 400;
-  font-size: 1.5rem; }
-
+  font-size: 1.5rem;
+}*/
 p {
-  font-size: 1.1rem;
-  font-family: "Roboto", sans-serif; }
+  font-size: 1rem;
+  font-family: "Open Sans ", sans-serif; }
 
 .highlight {
   color: #FF8552; }
@@ -100,14 +100,21 @@ p {
   color: #fff;
   text-align: center;
   line-height: 2rem;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif;
   transition: height 1s; }
 
+/*.header.top {
+  background-image: url('./images/loopkicks2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}*/
 @media (min-width: 25em) {
+  .header h1 {
+    font-size: 2rem; } }
+
+@media (min-width: 32em) {
   .header {
-    height: 12rem; }
-    .header h1 {
-      font-size: 2rem; } }
+    height: 12rem; } }
 
 @media (min-width: 40em) {
   .header {
@@ -142,6 +149,9 @@ p {
       .image-container img {
         height: 13.5rem;
         width: 24rem; } }
+
+.image-container.no-margs {
+  margin: 0; }
 
 .icons {
   padding: 0; }
@@ -235,7 +245,8 @@ p {
   opacity: 0.5; }
 
 .section {
-  transition: padding 0.5s; }
+  transition: padding 0.5s;
+  padding-top: 1rem; }
   @media (min-width: 25em) {
     .section {
       padding-left: 5rem;
@@ -272,3 +283,38 @@ p {
     .right {
       width: 40%;
       margin: 20px; } }
+
+.Tricks {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex: 1;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .Tricks .card {
+    height: 20rem;
+    margin: 10px auto;
+    background-color: #f0ede7;
+    border-radius: 10px;
+    transition: top ease 0.5s;
+    position: relative;
+    top: 0;
+    box-shadow: 3px 3px 20px 6px #c9c9c9;
+    word-wrap: normal;
+    overflow: auto;
+    flex-basis: 17.5rem; }
+    .Tricks .card img {
+      border-radius: 10px 10px 0 0; }
+    .Tricks .card .card-content {
+      margin: 5px; }
+      .Tricks .card .card-content h3 {
+        margin: 0 0 5px 0;
+        padding: 0; }
+      .Tricks .card .card-content .divider {
+        padding: 0;
+        top: 0; }
+  .Tricks .card:hover {
+    position: relative;
+    top: -10px; }

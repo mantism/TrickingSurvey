@@ -1,0 +1,19 @@
+video {
+  transition: height 1s, width 1s;
+  object-fit: fill; }
+  @media (min-width: 25em) {
+    video {
+      height: 4.5rem;
+      width: 8rem; } }
+  @media (min-width: 35em) {
+    video {
+      height: 6.75rem;
+      width: 12rem; } }
+  @media (min-width: 45em) {
+    video {
+      height: 9rem;
+      width: 16rem; } }
+  @media (min-width: 60em) {
+    video {
+      height: 10.15rem;
+      width: 18rem; } }
