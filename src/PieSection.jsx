@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import PieChart from './PieChart';
-import Divider from './Divider';
 
 class PieSection extends Component {
   render() {
@@ -8,7 +7,6 @@ class PieSection extends Component {
     
     return (
       <div className={classNames}>
-        <Divider size={3}/>
         <h2> {this.props.description} </h2>
         <PieChart width={this.props.width} height={this.props.height} data={this.props.data}
           donut={this.props.donut} theme={this.props.theme} float={this.props.float}

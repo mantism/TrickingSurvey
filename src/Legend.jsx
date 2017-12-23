@@ -17,7 +17,7 @@ class Legend extends Component {
       )
     });
     return (
-      <g transform={`translate(130, 70)`}>
+      <g transform={`translate(100, 70)`}>
         {items}
       </g>
     )

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "Aerial",
+    "val": 16
+  }, 
+  {
+    "id": "Gainer Switch",
+    "val": 8
+  },
+  {
+    "id": "Webster",
+    "val": 6
+  },
+  {
+    "id": "Gainer",
+    "val": 6
+  },
+  {
+    "id": "Flash Kick",
+    "val": 6
+  },
+  {
+    "id": "Moon kick",
+    "val": 3
+  },
+  {
+    "id": "Backflip",
+    "val": 3
+  },
+  {
+    "id": "Cart Frontflip",
+    "val": 2
+  },
+  {
+    "id": "Popswipe",
+    "val": 2
+  }, 
+  {
+    "id": "GMS",
+    "val": 2
+  }
+]

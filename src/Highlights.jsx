@@ -25,14 +25,11 @@ class Highlights extends Component {
               <li> <span className="highlight">116/365</span> said they discovered tricking through the internet </li>
               <li> More trickers claimed to upload videos to Instagram than YouTube</li>
             </ul>
-        </div>
-        <div className="content">
-           Obviously, this survey was not perfect. Along with the fact that only a small percentage of the 
+            <p> Obviously, this survey was not perfect. Along with the fact that only a small percentage of the 
            community responded, it was heavily biased against trickers who don't speak English. Hopefully, 
            future surveys can yield a larger sample pool and more diverse responses.
-           <br/>
+           </p>
         </div>
-       
       </div>
     )
   }

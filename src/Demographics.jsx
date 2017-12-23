@@ -8,7 +8,7 @@ class Demographics extends Component {
     return (
       <div className="Demographics section">
         <h1>Demographics</h1>
-        <Divider size={2}/>
+        <Divider size={3}/>
         <Geography />
         <Gender/>
       </div>

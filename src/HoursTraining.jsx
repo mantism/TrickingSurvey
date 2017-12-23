@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Divider from './Divider';
 
 class HoursTraining extends Component {
   render() {
@@ -24,8 +23,7 @@ class HoursTraining extends Component {
         
     return (
       <div className='hours-training'>
-        <Divider/>
-        <h2> How many hours a week do you train? </h2>
+        <h2> How many hours a week do they train? </h2>
         <div className='top-label' style={topStyles}>
           Hours per Week
         </div>
@@ -33,7 +31,9 @@ class HoursTraining extends Component {
           Number <br/> of <br/> Trickers
         </div>
         <img src={url} alt='Hours Training' style={imageStyles}/>
-        {this.props.children}
+        <div style={{paddingBottom: "1rem"}}>
+          {this.props.children}
+        </div>
       </div>
     );
   }

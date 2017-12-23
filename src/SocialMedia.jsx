@@ -49,15 +49,14 @@ class SocialMedia extends Component {
     
     return (
       <div className="SocialMedia">
-        <Divider size={3} />
         <h2> {this.props.description} </h2>
         <div className="chart-section" style={{marginBottom: 0}}>
           <svg viewBox={`0 0 ${this.props.width} ${this.props.height}`}>
             <g>
               <path d={youTubeCircle()} fill={'#cc181e'}
-                transform={`translate(150, 140)`}
+                transform={`translate(150, 130)`}
               />
-              <text x='0' y='0' transform={`translate(85, 60)`}
+              <text x='0' y='0' transform={`translate(85, 50)`}
                 fill={'#cc181e'} fontSize={`2rem`} fontFamily={'Roboto'}>
                 <tspan x='35' dy='1.2em'>{this.state.youTube} </tspan>
                 <tspan x='5' dy='1.2em'>YouTube</tspan>
@@ -66,9 +65,9 @@ class SocialMedia extends Component {
             </g>
             <g>
               <path d={instaCircle()} fill={'#9b6954'}
-                transform={`translate(400, 230)`}
+                transform={`translate(400, 220)`}
               />
-              <text x='0' y='0' transform={`translate(325, 130)`}
+              <text x='0' y='0' transform={`translate(325, 120)`}
                 fill={'#9b6954'} fontSize={`2.5rem`} fontFamily={'Roboto'}>
                 <tspan x='42' dy='1.2em'>{this.state.insta} </tspan>
                 <tspan x='-12' dy='1.2em'>Instagram</tspan>
@@ -77,9 +76,9 @@ class SocialMedia extends Component {
             </g>
             <g>
               <path d={bothCircle()} fill={'#0584ba'}
-                transform={`translate(200, 340)`}
+                transform={`translate(200, 330)`}
               />
-              <text x='0' y='0' transform={`translate(142, 282)`}
+              <text x='0' y='0' transform={`translate(142, 272)`}
                 fill={'#0584ba'} fontSize={`1.8rem`} fontFamily={'Roboto'}>
                 <tspan x='35' dy='1.2em'>{this.state.both} </tspan>
                 <tspan x='-2' dy='1.2em'>Upload to</tspan>
@@ -87,11 +86,11 @@ class SocialMedia extends Component {
               </text>
             </g>
             <g>
-              <text transform={'translate(300, 400)'} fill={'#39393A'}
+              <text transform={'translate(300, 390)'} fill={'#39393A'}
                 fontSize={'1.25rem'} fontFamily={'Roboto'}>
                 {this.state.neither} Upload to Neither YouTube nor Instagram
               </text>
-              <text transform={'translate(300, 430)'} fill={'#51848b'}
+              <text transform={'translate(300, 420)'} fill={'#51848b'}
                 fontSize={'1.2rem'} fontFamily={'Roboto'}>
                 {this.state.other} Upload Elsewhere
               </text>
@@ -106,7 +105,7 @@ class SocialMedia extends Component {
 
 SocialMedia.defaultProps = {
   width: 700,
-  height: 500
+  height: 450
 }
 
 export default SocialMedia;

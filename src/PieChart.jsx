@@ -30,7 +30,7 @@ class Slice extends Component {
       .innerRadius(innerRadius)
       .outerRadius(outerRadius)
       .padAngle(padAngle);
-    let xOffSet = (this.props.float === 'left') ? this.props.width / 6 : this.props.width / 4;
+    let xOffSet = (this.props.float === 'left') ? this.props.width / 6 : this.props.width / 4.5;
     let centroid = arc.centroid(this.props.value);
     let label = (this.props.labels) ? 
       <text transform={`translate(${xOffSet + centroid[0]}, ${centroid[1] + this.props.height / 2})`}

@@ -6,6 +6,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
   transition: font-size 1s;
+  font-weight: 600;
 }
 
 h1 {
@@ -34,4 +35,9 @@ p {
 .caption {
   font-size: 0.8rem;
   font-weight: 300;
+}
+
+.headline {
+  padding-top: 0.5rem;
+  margin-top: 0;
 }
