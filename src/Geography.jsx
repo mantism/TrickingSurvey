@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
-
 import world from './data/world.js';
 import trickerCountries from './data/trickerCountries.json';
-import Divider from './Divider';
 import HiddenContent from './HiddenContent';
 
 const projection = geoMercator().scale(100).translate([ 800 / 2, 450 / 2 ]);
