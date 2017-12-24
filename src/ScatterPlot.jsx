@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import { scaleBand } from 'd3-scale';
 import Axes from './Axes';
 import _ from 'lodash';
-import * as consts from './d3Consts';
 
 class ScatterPlot extends Component {
   constructor(props) {
@@ -104,7 +103,7 @@ class ScatterPlot extends Component {
     });
 
     return (
-      <div className="chart-section" ref={(el)=> { this.container = el}}>
+      <div id={this.props.class} className="chart-section" ref={(el)=> { this.container = el}}>
         <svg viewBox={`0 0 ${width} ${height}`}>
           <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} 
             xLabel={this.props.xlabel} yLabel={this.props.ylabel} theme={this.props.theme}

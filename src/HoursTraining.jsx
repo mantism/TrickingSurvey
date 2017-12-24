@@ -22,7 +22,7 @@ class HoursTraining extends Component {
     }
         
     return (
-      <div className='hours-training'>
+      <div className='hours-training' id='Weekly Training'>
         <h2> How many hours a week do they train? </h2>
         <div className='top-label' style={topStyles}>
           Hours per Week

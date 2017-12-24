@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import PieChart from './PieChart';
-import Divider from './Divider';
 import genderData from './data/gender.json';
 
 class Gender extends Component {
   render() {
     return (
-      <div className="Gender">
+      <div className="Gender" id="Gender">
         <h2> What do trickers identify as? (gender) </h2>
         <div className="left">
           <PieChart data={genderData} class="Gender" float="left"
@@ -32,6 +31,3 @@ class Gender extends Component {
 }
 
 export default Gender;
-
-/*
- */

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import * as shape from 'd3-shape';
-import Divider from './Divider';
 import data from './data/trickingsurveyresults.json';
 
 class SocialMedia extends Component {
@@ -48,7 +47,7 @@ class SocialMedia extends Component {
       .endAngle(Math.PI * 2);
     
     return (
-      <div className="SocialMedia">
+      <div className="SocialMedia" id="Video Uploads">
         <h2> {this.props.description} </h2>
         <div className="chart-section" style={{marginBottom: 0}}>
           <svg viewBox={`0 0 ${this.props.width} ${this.props.height}`}>

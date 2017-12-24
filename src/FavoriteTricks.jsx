@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Card from './Card';
-import Divider from './Divider';
 import tricksData from './data/popularTricks.json';
 import _ from 'lodash';
 
@@ -12,7 +11,7 @@ class FavoriteTricks extends Component {
     })
     
     return (
-      <div>
+      <div id="Top-10-Tricks">
         <h2>Top 10(ish) Favorite Tricks:</h2>
         <div className="FavoriteTricks">
           {cards}

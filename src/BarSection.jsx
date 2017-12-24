@@ -6,7 +6,7 @@ class BarSection extends Component {
     const classNames = 'BarSection ' + this.props.class;
     
     return (
-      <div className={classNames}>
+      <div className={classNames} id={this.props.class}>
         <h2> {this.props.description} </h2>
         <BarChart width={this.props.width} height={this.props.height} data={this.props.data}
           xlabel={this.props.xlabel} ylabel={this.props.ylabel} theme={this.props.theme}
