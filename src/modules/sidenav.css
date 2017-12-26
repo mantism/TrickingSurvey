@@ -1,2 +1,16 @@
 .side-nav {
-  position: fixed; }
+  position: sticky;
+  top: 5px;
+  margin: 0 auto;
+  float: left;
+  display: block; }
+  .side-nav ul {
+    list-style-type: none;
+    margin-left: 20px;
+    padding-left: 0; }
+  .side-nav a {
+    color: black; }
+  .side-nav a:link {
+    color: black; }
+  .side-nav a:visited {
+    color: black; }

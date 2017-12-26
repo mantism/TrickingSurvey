@@ -1,5 +1,7 @@
 .section {
-  transition: padding 0.5s; }
+  transition: padding 0.5s;
+  margin: 0 auto;
+  max-width: 900px; }
   .section .content {
     margin-top: 0.50rem;
     padding-top: 1rem; }

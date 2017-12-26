@@ -1,9 +1,20 @@
 import React, {Component} from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 import Card from './Card';
 import tricksData from './data/popularTricks.json';
 import _ from 'lodash';
 
 class FavoriteTricks extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(isVisible) {
+    this.props.currComponentInView('#Top-10-Tricks');
+  }
+
   render() {
     let cards = _.map(tricksData, (t, i) => {
       return <Card key={i} id={i} header={t.trick + ': ' + t.count + ' trickers'} 
@@ -11,13 +22,17 @@ class FavoriteTricks extends Component {
     })
     
     return (
-      <div id="Top-10-Tricks">
-        <h2>Top 10(ish) Favorite Tricks:</h2>
-        <div className="FavoriteTricks">
-          {cards}
+      <VisibilitySensor onChange={this.onChange}
+        scrollCheck
+        scrollThrottle={20}
+        >
+        <div id="Top-10-Tricks">
+          <h2>Top 10(ish) Favorite Tricks:</h2>
+          <div className="FavoriteTricks">
+            {cards}
+          </div>
         </div>
-      </div>
-      
+      </VisibilitySensor>
     )
   }
 }

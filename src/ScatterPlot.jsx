@@ -49,7 +49,6 @@ class ScatterPlot extends Component {
       }
     }
     return counts;
-    
   }
 
   //need to figure out how to map, sort, and reduce all the values
@@ -80,6 +79,8 @@ class ScatterPlot extends Component {
       .range([height - this.props.margins.bottom, this.props.margins.top]);
   }
 
+  
+
   render() {
     const width = Math.max(this.state.containerWidth, this.props.width);
     const height = this.props.width * (5/7);
@@ -102,7 +103,7 @@ class ScatterPlot extends Component {
       );
     });
 
-    return (
+    return (   
       <div id={this.props.class} className="chart-section" ref={(el)=> { this.container = el}}>
         <svg viewBox={`0 0 ${width} ${height}`}>
           <Axes scales={{xScale, yScale}} margins={this.props.margins} svgHeight={height} svgWidth={width} 

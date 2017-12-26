@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 import { geoMercator, geoPath } from 'd3-geo';
 import world from './data/world.js';
 import trickerCountries from './data/trickerCountries.json';
@@ -16,10 +17,15 @@ class Geography extends Component {
     }
 
     this.toggleCountryList = this.toggleCountryList.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   toggleCountryList() {
     this.setState({listHidden: !this.state.listHidden});
+  }
+
+  onChange(isVisible) {
+    this.props.currComponentInView('#Geography');
   }
 
   render() {
@@ -82,29 +88,31 @@ class Geography extends Component {
         </div>);
 
     return (
-      <div className="Geography" id="Geography">
-        <h2>Where are trickers from?</h2>
-        <div className="Map"> 
-          <svg viewBox="0 0 800 350"> 
-            <g className="countries">
-              {countries}
-            </g>
-            {circles}
-          </svg>
-          <div className="content">
-          Here the bias towards US Citizens becomes very clear. <span className="highlight">134/365</span> of
-          the respondents indicated they were from the United States. The country with the next highest
-          number of respondents is Germany with <span className="highlight">31</span>. Followed by Canada with 
-          <span className="highlight"> 16 </span> respondents. Hopefully, with future surveys we will be able to see
-          a more representative map of the tricking community. In total, responses came from 49 different countries. 
-          <span className="CTA" onClick={this.toggleCountryList}> Click here to see the entire list of represented countries.
-          </span>
-          <HiddenContent hidden={this.state.listHidden}>
-            {countryList}
-          </HiddenContent>
+      <VisibilitySensor onChange={this.onChange} scrollCheck scrollThrottle={100}>
+        <div className="Geography" id="Geography">
+          <h2>Where are trickers from?</h2>
+          <div className="Map"> 
+            <svg viewBox="0 0 800 350"> 
+              <g className="countries">
+                {countries}
+              </g>
+              {circles}
+            </svg>
+            <div className="content">
+            Here the bias towards US Citizens becomes very clear. <span className="highlight">134/365</span> of
+            the respondents indicated they were from the United States. The country with the next highest
+            number of respondents is Germany with <span className="highlight">31</span>. Followed by Canada with 
+            <span className="highlight"> 16 </span> respondents. Hopefully, with future surveys we will be able to see
+            a more representative map of the tricking community. In total, responses came from 49 different countries. 
+            <span className="CTA" onClick={this.toggleCountryList}> Click here to see the entire list of represented countries.
+            </span>
+            <HiddenContent hidden={this.state.listHidden}>
+              {countryList}
+            </HiddenContent>
+            </div>
           </div>
         </div>
-      </div>
+      </VisibilitySensor>
     );
   }
 }
