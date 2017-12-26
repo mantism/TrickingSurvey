@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve"><style type="text/css">
+	.st0{fill:none;stroke:#fff;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:square;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#fff;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:3.3688,3.3688;}
+	.st6{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:3.7993,3.7993;}
+	.st7{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:3.893,3.893;}
+	.st9{stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:5,6;}
+	.st12{fill:none;stroke:#fff;stroke-width:7;stroke-linecap:round;stroke-miterlimit:10;}
+</style><circle class="st1" cx="32" cy="32" r="24"></circle><circle class="st1" cx="32" cy="32" r="19"></circle><circle class="st1" cx="32" cy="32" r="6"></circle><line class="st3" x1="32" y1="14" x2="32" y2="25"></line><line class="st1" x1="32" y1="1" x2="32" y2="8"></line><line class="st3" x1="32" y1="50" x2="32" y2="39"></line><line class="st1" x1="32" y1="63" x2="32" y2="56"></line><line class="st1" x1="50" y1="32" x2="39" y2="32"></line><line class="st1" x1="63" y1="32" x2="56" y2="32"></line><line class="st3" x1="14" y1="32" x2="25" y2="32"></line><line class="st1" x1="1" y1="32" x2="8" y2="32"></line><line class="st3" x1="44.4" y1="44.4" x2="37.2" y2="37.2"></line><line class="st1" x1="53.9" y1="53.9" x2="49" y2="49"></line><line class="st3" x1="19.6" y1="19.6" x2="26.8" y2="26.8"></line><line class="st1" x1="10.1" y1="10.1" x2="15" y2="15"></line><line class="st3" x1="44.4" y1="19.6" x2="37.2" y2="26.8"></line><line class="st1" x1="53.9" y1="10.1" x2="49" y2="15"></line><line class="st3" x1="19.6" y1="44.4" x2="26.8" y2="37.2"></line><line class="st1" x1="10.1" y1="53.9" x2="15" y2="49"></line></svg>
