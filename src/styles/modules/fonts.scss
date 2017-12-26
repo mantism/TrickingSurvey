@@ -14,18 +14,13 @@ h1 {
   margin-bottom: 0.35rem;
 }
 
-/*h3 {
-  font-weight: 400;
-  font-size: 1.5rem;
-}*/
-
 p {
   font-size: 1rem;
   font-family: $body-font;
 }
 
 .highlight {
-  color: $orange2;
+  color: $orange;
 }
 
 .CTA {
@@ -40,4 +35,5 @@ p {
 .headline {
   padding-top: 0.5rem;
   margin-top: 0;
+	font-weight: 500;
 }

@@ -1,6 +1,6 @@
 {
-  "name": "tricking",
-  "version": "0.1.0",
+  "name": "TrickStats",
+  "version": "0.5.0",
   "private": true,
   "dependencies": {
     "d3-array": "^1.2.0",

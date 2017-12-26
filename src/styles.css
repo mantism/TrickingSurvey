@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html, body {
   background-color: #f0ede7; }
 
@@ -61,7 +61,7 @@ html, body {
   background: #cd853f; }
 
 html, body {
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,16 +73,12 @@ h1 {
   font-size: 2rem;
   margin-bottom: 0.35rem; }
 
-/*h3 {
-  font-weight: 400;
-  font-size: 1.5rem;
-}*/
 p {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 .highlight {
-  color: #FF8552; }
+  color: #cd853f; }
 
 .CTA {
   color: #0584ba; }
@@ -93,7 +89,8 @@ p {
 
 .headline {
   padding-top: 0.5rem;
-  margin-top: 0; }
+  margin-top: 0;
+  font-weight: 500; }
 
 .header {
   background: #cd853f;
