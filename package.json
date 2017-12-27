@@ -24,7 +24,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "git push heroku master"
+		"heroku-push": "git push heroku master",
+    "deploy": "npm run-all -p predeploy heroku-push"
   },
   "devDependencies": {
     "lodash": "^4.17.4",
