@@ -15,7 +15,7 @@ class Experience extends Component {
     return (
 			<div className="Experience" id="Experience">
         <div className="section">
-          <h1 className="headline">Experience</h1>
+          <h1>Experience</h1>
           <Divider size={3}/>
           <div className="content" style={{"marginTop": "0"}}>
             In the survey, several questions were asked related to tricker's
@@ -46,8 +46,9 @@ class Experience extends Component {
               </div>
             </YearsVsGatherings>
             <HoursTraining>
-               Some interesting training habits mentioned include training 20+ hours a week as well as 
-               cross-training with calisthenics, bboying, meditation, and trampolining.
+              Some interesting training habits mentioned include training 20+ hours a week as well as 
+              cross-training with calisthenics, bboying, parkour,  meditation, and trampolining. Other outliers include
+							training for 15 hours and 18 hours a week.
             </HoursTraining>
           </div>    
         </div>
