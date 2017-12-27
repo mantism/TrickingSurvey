@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
 		"heroku-push": "git push heroku master",
-    "deploy": "npm run-all -p predeploy heroku-push"
+    "deploy": "npm-run-all -p predeploy heroku-push"
   },
   "devDependencies": {
     "lodash": "^4.17.4",
