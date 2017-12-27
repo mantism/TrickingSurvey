@@ -13,12 +13,12 @@ class Highlights extends Component {
           <h1>Highlights</h1>
           <Divider size={3}/>
           <div className="content">
-            In total, only 15 questions were asked. Some key highlights are:
+            In total, 15 questions were asked. Some key highlights are:
             <ul>
               <li> The most popular trick was <span className="highlight"> Cork </span></li>
               <li> Although combo's weren't asked for, the most mentioned combo was <span className="highlight"> 
                 Aerial -> front swing -> Raiz</span></li>
-              <Image alt="cork" url={corkURL} size="medium"/>
+							<Image alt="cork" url={corkURL} size="medium"/>
               <Image alt="aerial_raiz" url={aerialRaizURL} size="medium"/>
               <li> Most of the respondents train between <span className="highlight">4-6 hours</span> a week </li>
               <li> Approximately <span className="highlight">60%</span> of the respondents have been tricking 

@@ -4,28 +4,34 @@
   img {
     transition: height 1s, width 1s;
 
-    @media (min-width: 25em) {
-      height: 4.5rem;
-      width: 8rem;
+    @media (max-width: 48em) {
+      height: 10.08rem;
+      width: 17.92rem;
     }
 
-    @media (min-width: 35em) {
-      height: 6.75rem;
-      width: 12rem;
+    @media (min-width: 62em) {
+      height: 14.4rem;
+      width: 25.6rem;
     }
 
-    @media (min-width: 45em) {
-      height: 9rem;
-      width: 16rem;
+    @media (min-width: 75em) {
+      height: 21.6rem;
+      width: 38.4rem;
     }
 
-    @media (min-width: 60em) {
-      height: 13.5rem;
-      width: 24rem;
-    }
+		max-height: 14.4rem;
+		max-width: 25.6rem;
   }
+
 }
 
 .image-container.no-margs {
   margin: 0;
+}
+
+.image-container.small {
+	img {
+		max-height: 10.08rem;
+		max-width: 17.92rem;
+	}
 }

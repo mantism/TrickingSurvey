@@ -1,8 +1,20 @@
 .section {
   transition: padding 0.5s;
   margin: 0 auto;
-  max-width: 900px;
-  
+	max-width: 80%;
+
+  @media (min-width: 48em) {
+    max-width: 80%;
+	}	
+
+	@media (min-width: 62em) {
+	  max-width: 80%;
+	}
+
+	@media (min-width: 75em) {
+		max-width: 50%;
+	}
+
 	.content {
     margin-top: 0.50rem;
     padding-top: 1rem;

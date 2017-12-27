@@ -2,23 +2,25 @@
   display: inline-block;
   margin: 1rem 0.5rem; }
   .image-container img {
-    transition: height 1s, width 1s; }
-    @media (min-width: 25em) {
+    transition: height 1s, width 1s;
+    max-height: 14.4rem;
+    max-width: 25.6rem; }
+    @media (max-width: 48em) {
       .image-container img {
-        height: 4.5rem;
-        width: 8rem; } }
-    @media (min-width: 35em) {
+        height: 10.08rem;
+        width: 17.92rem; } }
+    @media (min-width: 62em) {
       .image-container img {
-        height: 6.75rem;
-        width: 12rem; } }
-    @media (min-width: 45em) {
+        height: 14.4rem;
+        width: 25.6rem; } }
+    @media (min-width: 75em) {
       .image-container img {
-        height: 9rem;
-        width: 16rem; } }
-    @media (min-width: 60em) {
-      .image-container img {
-        height: 13.5rem;
-        width: 24rem; } }
+        height: 21.6rem;
+        width: 38.4rem; } }
 
 .image-container.no-margs {
   margin: 0; }
+
+.image-container.small img {
+  max-height: 10.08rem;
+  max-width: 17.92rem; }
