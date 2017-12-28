@@ -19,12 +19,12 @@ class SocialMedia extends Component {
     this.onMouseOut = this.onMouseOut.bind(this);
   }
 
-  onMouseOver() {
-    this.setState({isHovered: true});
-  }
+  onMouseOver(e) {
+ 		e.target.setAttribute('opacity', '0.5');
+	}
 
-  onMouseOut() {
-    this.setState({isHovered: false});
+  onMouseOut(e) {
+ 		e.target.setAttribute('opacity', '1.0');
   }
 
   render() {
@@ -55,7 +55,7 @@ class SocialMedia extends Component {
             <g>
               <path d={youTubeCircle()} fill={'#cc181e'}
                 transform={`translate(150, 130)`}
-              />
+                onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}/>
               <text x='0' y='0' transform={`translate(85, 50)`}
                 fill={'#cc181e'} fontSize={`2rem`} fontFamily={'Open Sans'}>
                 <tspan x='35' dy='1.2em'>{this.state.youTube} </tspan>
@@ -66,7 +66,8 @@ class SocialMedia extends Component {
             <g>
               <path d={instaCircle()} fill={'#9b6954'}
                 transform={`translate(400, 220)`}
-                />
+                onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}
+								/>
               <text x='0' y='0' transform={`translate(325, 120)`}
                 fill={'#9b6954'} fontSize={`2.5rem`} fontFamily={'Open Sans'}>
                 <tspan x='42' dy='1.2em'>{this.state.insta} </tspan>
@@ -77,6 +78,7 @@ class SocialMedia extends Component {
             <g>
               <path d={bothCircle()} fill={'#0584ba'}
                 transform={`translate(200, 330)`}
+                onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}
               />
               <text x='0' y='0' transform={`translate(142, 272)`}
                 fill={'#0584ba'} fontSize={`1.8rem`} fontFamily={'Open Sans'}>
@@ -103,7 +105,7 @@ class SocialMedia extends Component {
 }
 
 SocialMedia.defaultProps = {
-  width: 700,
+  width: 750,
   height: 450
 }
 
