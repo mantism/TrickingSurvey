@@ -57,7 +57,7 @@ class SocialMedia extends Component {
                 transform={`translate(150, 130)`}
               />
               <text x='0' y='0' transform={`translate(85, 50)`}
-                fill={'#cc181e'} fontSize={`2rem`} fontFamily={'Roboto'}>
+                fill={'#cc181e'} fontSize={`2rem`} fontFamily={'Open Sans'}>
                 <tspan x='35' dy='1.2em'>{this.state.youTube} </tspan>
                 <tspan x='5' dy='1.2em'>YouTube</tspan>
                 <tspan x='-5' dy='1.2em'>Uploaders </tspan>
@@ -68,7 +68,7 @@ class SocialMedia extends Component {
                 transform={`translate(400, 220)`}
                 />
               <text x='0' y='0' transform={`translate(325, 120)`}
-                fill={'#9b6954'} fontSize={`2.5rem`} fontFamily={'Roboto'}>
+                fill={'#9b6954'} fontSize={`2.5rem`} fontFamily={'Open Sans'}>
                 <tspan x='42' dy='1.2em'>{this.state.insta} </tspan>
                 <tspan x='-12' dy='1.2em'>Instagram</tspan>
                 <tspan x='-12' dy='1.2em'>Uploaders </tspan>
@@ -79,7 +79,7 @@ class SocialMedia extends Component {
                 transform={`translate(200, 330)`}
               />
               <text x='0' y='0' transform={`translate(142, 272)`}
-                fill={'#0584ba'} fontSize={`1.8rem`} fontFamily={'Roboto'}>
+                fill={'#0584ba'} fontSize={`1.8rem`} fontFamily={'Open Sans'}>
                 <tspan x='35' dy='1.2em'>{this.state.both} </tspan>
                 <tspan x='-2' dy='1.2em'>Upload to</tspan>
                 <tspan x='30' dy='1.2em'>Both </tspan>
@@ -87,11 +87,11 @@ class SocialMedia extends Component {
             </g>
             <g>
               <text transform={'translate(300, 390)'} fill={'#39393A'}
-                fontSize={'1.25rem'} fontFamily={'Roboto'}>
+                fontSize={'1.25rem'} fontFamily={'Open Sans'}>
                 {this.state.neither} Upload to Neither YouTube nor Instagram
               </text>
               <text transform={'translate(300, 420)'} fill={'#51848b'}
-                fontSize={'1.2rem'} fontFamily={'Roboto'}>
+                fontSize={'1.2rem'} fontFamily={'Open Sans'}>
                 {this.state.other} Upload Elsewhere
               </text>    
             </g>

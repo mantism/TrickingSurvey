@@ -19,10 +19,11 @@
 }
 
 .logo {
-	height: 4rem;
-	width: 4rem;
+	height: 50px;
+	width: 64px;
 	margin: 10px auto;
 	background: url('./images/TS.png');
+	background-repeat: none;
 }
 
 @keyframes spin {
