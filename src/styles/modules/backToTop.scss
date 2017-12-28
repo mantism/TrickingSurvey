@@ -1,0 +1,30 @@
+.back-top-btn {
+	position: fixed;
+	bottom: 50px;
+	right: 100px;
+
+	@media (max-width: 32em) {
+		display: none;
+	}
+
+	@media (min-width: 32em) {
+		display: block;
+		right: 25px;
+	}
+
+	@media (min-width: 48em) {
+		right: 50px;
+	}
+
+	@media (min-width: 62em) {
+		right: 75px;
+	}
+
+	@media (min-width: 75em) {
+		right: 100px;
+  }
+}
+
+.back-top-btn:hover {
+	color: $light-blue;
+}

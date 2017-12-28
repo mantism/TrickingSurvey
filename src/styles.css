@@ -9,6 +9,30 @@ html, body {
 .Tricks {
   background-color: #F7FFF7; }
 
+.back-top-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 100px; }
+  @media (max-width: 32em) {
+    .back-top-btn {
+      display: none; } }
+  @media (min-width: 32em) {
+    .back-top-btn {
+      display: block;
+      right: 25px; } }
+  @media (min-width: 48em) {
+    .back-top-btn {
+      right: 50px; } }
+  @media (min-width: 62em) {
+    .back-top-btn {
+      right: 75px; } }
+  @media (min-width: 75em) {
+    .back-top-btn {
+      right: 100px; } }
+
+.back-top-btn:hover {
+  color: #0584ba; }
+
 .chart-section {
   margin: 0 auto;
   position: relative;
@@ -130,24 +154,18 @@ p {
     width: 10%;
     display: inline-block; }
   @media (max-width: 32em) {
-    .footer {
-      height: 18rem; }
-      .footer h1 {
-        font-size: 2rem; }
-      .footer .col {
-        width: 35%; } }
+    .footer h1 {
+      font-size: 2rem; }
+    .footer .col {
+      width: 35%; } }
   @media (min-width: 32em) {
-    .footer {
-      height: 18rem; }
-      .footer h1 {
-        font-size: 2rem; }
-      .footer .col {
-        width: 33%; } }
+    .footer h1 {
+      font-size: 2rem; }
+    .footer .col {
+      width: 33%; } }
   @media (min-width: 62em) {
-    .footer {
-      height: 16.5rem; }
-      .footer .col {
-        width: 20%; } }
+    .footer .col {
+      width: 20%; } }
   @media (min-width: 75em) {
     .footer h1 {
       font-size: 3rem; }
