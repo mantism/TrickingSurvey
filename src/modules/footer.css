@@ -1,0 +1,16 @@
+.footer {
+  margin: 0;
+  background: #39393a;
+  color: #fff;
+  width: 100%;
+  text-align: center; }
+  .footer h1 {
+    margin: 0;
+    padding: 1rem; }
+  .footer h4 {
+    margin: 0.5rem; }
+  .footer h5 {
+    margin: 0;
+    padding: 0.5rem; }
+  .footer a {
+    text-decoration: none; }

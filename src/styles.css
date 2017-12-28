@@ -92,6 +92,68 @@ p {
   margin-top: 0;
   font-weight: 500; }
 
+.footer {
+  margin: 0;
+  background: #39393a;
+  color: #fff;
+  width: 100%;
+  height: 18rem;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  line-height: 2rem;
+  font-family: "Open Sans", sans-serif; }
+  .footer h1 {
+    margin: 0;
+    font-size: 3rem; }
+  .footer h3 {
+    margin: 1rem; }
+  .footer h5 {
+    margin: 0; }
+  .footer a {
+    color: #F7FFF7;
+    text-decoration: none; }
+  .footer a:link {
+    color: #0584ba;
+    text-decoration: none; }
+  .footer a:visited {
+    color: #F7FFF7;
+    text-decoration: none; }
+  .footer a:hover {
+    color: #0584ba;
+    text-decoration: none; }
+  .footer i {
+    margin-left: 5px;
+    margin-right: 5px; }
+  .footer .col {
+    top: 0;
+    width: 10%;
+    display: inline-block; }
+  @media (max-width: 32em) {
+    .footer {
+      height: 18rem; }
+      .footer h1 {
+        font-size: 2rem; }
+      .footer .col {
+        width: 35%; } }
+  @media (min-width: 32em) {
+    .footer {
+      height: 18rem; }
+      .footer h1 {
+        font-size: 2rem; }
+      .footer .col {
+        width: 33%; } }
+  @media (min-width: 62em) {
+    .footer {
+      height: 16.5rem; }
+      .footer .col {
+        width: 20%; } }
+  @media (min-width: 75em) {
+    .footer h1 {
+      font-size: 3rem; }
+    .footer .col {
+      width: 10%; } }
+
 .header {
   background: #cd853f;
   background: -webkit-linear-gradient(to left top, #cd853f, #0584ba);
@@ -172,6 +234,12 @@ p {
   margin-left: 10px;
   margin-right: 10px;
   animation: spin 5.0s linear infinite; }
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+  margin: 10px auto;
+  background: url("./images/TS.png"); }
 
 @keyframes spin {
   from {
@@ -298,21 +366,27 @@ p {
 
 .left {
   display: inline-block; }
-  @media (min-width: 32em) {
+  @media (max-width: 32em) {
     .left {
       width: 100%; } }
-  @media (min-width: 40em) {
+  @media (min-width: 32em) {
+    .left {
+      width: 50%; } }
+  @media (min-width: 48em) {
     .left {
       width: 40%; } }
 
 .right {
   display: inline-block;
   vertical-align: top; }
-  @media (min-width: 32em) {
+  @media (max-width: 32em) {
     .right {
       width: 100%;
       margin: 0px; } }
-  @media (min-width: 40em) {
+  @media (min-width: 32em) {
+    .right {
+      width: 40%; } }
+  @media (min-width: 48em) {
     .right {
       width: 50%;
       margin: 20px; } }
