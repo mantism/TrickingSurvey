@@ -39,10 +39,18 @@ class Experience extends Component {
               theme={theme}/>
             <YearsVsGatherings data={allData} class="Gatherings" theme={theme}>
               <div>
+								<p>
+									Gathering - <i>"an assembly or meeting, especially a social or festive one or one held for a specific purpose."</i> - Google <br/>
+									Gatherings form the basis of tricking events. At their core, they are massive trick sessions where trickers feed off of
+			        		each other's energy to throw the best tricks they can and learn from each other.
+								</p>
+								<p>Out of the 365 responses <span className="highlight">only 22 had not attended a single gathering</span> in their tricking career.
+									 <span className="highlight"> 15 of the 22</span> had started tricking that year (2016). </p>
                 <p>A strong linear correlation is shown between the number of years someone has been tricking
                   and the number of gatherings they've attended. However, no other correlation was found
                   between how long someone has been tricking and other pieces of data such as how often they train 
-                  and how they discovered tricking.</p>
+                  and how they discovered tricking.
+								</p>
               </div>
             </YearsVsGatherings>
             <HoursTraining>

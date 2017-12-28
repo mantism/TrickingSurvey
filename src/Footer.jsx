@@ -7,7 +7,7 @@ class Footer extends Component {
 				<h1>Thanks for visiting!</h1>
 				<h3>TrickStats.com - 2017</h3>
 				<div className="col">
-			  	<h5><a href="">2017 Survey</a></h5>
+			  	<h5><a href="https://goo.gl/forms/hwi9tYjsArkKVDtL2">2017 Survey</a></h5>
 					<h5><a href="https://mantism.github.io">About Me</a></h5>
 					<h5><a href="mailto:mikael.mantis7@gmail.com">Contact Me</a></h5>
 				  <h5><a className="scroll-top" onClick={this.props.scrollTop}>Back to Top</a></h5>
