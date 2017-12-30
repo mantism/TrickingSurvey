@@ -54,6 +54,7 @@ class Tricks extends Component {
             or would just like to know more about the top tricks. 
           </p>
         </div>
+        {this.props.children}
 			</div>
     )
   }
