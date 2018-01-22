@@ -2,17 +2,9 @@
   transition: padding 0.5s;
   margin: 0 auto;
 	max-width: 80%;
-
-  @media (min-width: 48em) {
-    max-width: 80%;
-	}	
-
-	@media (min-width: 62em) {
-	  max-width: 80%;
-	}
-
-	@media (min-width: 75em) {
-		max-width: 50%;
+	
+	@media (min-width: 120em) {
+		max-width: 60%;
 	}
 
 	.content {

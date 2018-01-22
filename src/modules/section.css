@@ -2,15 +2,9 @@
   transition: padding 0.5s;
   margin: 0 auto;
   max-width: 80%; }
-  @media (min-width: 48em) {
+  @media (min-width: 120em) {
     .section {
-      max-width: 80%; } }
-  @media (min-width: 62em) {
-    .section {
-      max-width: 80%; } }
-  @media (min-width: 75em) {
-    .section {
-      max-width: 50%; } }
+      max-width: 60%; } }
   .section .content {
     margin-top: 0.50rem;
     padding-top: 1rem; }

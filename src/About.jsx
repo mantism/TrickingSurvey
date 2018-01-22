@@ -13,7 +13,7 @@ class About extends Component {
             Facebook groups in an attempt to learn more about the community at large. For visitors
 			      who may not know what tricking is, in its simplest definition tricking is a movement art/sport
 			      that combines acrobatic movements from martial arts, gymnastics, and other forms of movement such as dance.
-			      However, tricking isn't just defined by its moves, its defined by the community that practices it.<br/><br/>
+			      However, tricking isn't just defined by its moves, it's defined by the community that practices it.<br/><br/>
             At the time, the Tricking facebook group contained <span className="highlight"> 23,155 </span> members.
             However, shortly after the survey was sent the original group was made secret and is now no longer active.
             From its ashes came a new Facebook group that now contains <span className="highlight"> 11,000+ </span>
