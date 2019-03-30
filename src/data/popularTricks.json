@@ -2,85 +2,85 @@
   {
     "trick": "Cork",
     "count": 31,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/cork.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/cork.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/cork.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/cork.gif",
     "caption": "Short for corkscrew, the cork is a gainer flash with a single twist. You can also think of it as a full twist off of one foot."
   },
   {
     "trick": "B-Twist",
     "count": 17,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/butterflytwist.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/butterflytwist.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/butterflytwist.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/butterflytwist.gif",
     "caption": "Butterfly Twist: A butterfly kick that rotates 360° in the air before landing."
   },
   {
     "trick": "Aerial",
     "count": 16,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/aerial.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/aerial.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/aerial.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/aerial.gif",
     "caption": "A cartwheel with no-hands."
   },
   {
     "trick": "540",
     "count": 15,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/540.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/540.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/540.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/540.gif",
     "caption": "A tornado that lands in hyper (extra 180 °) on the inside kicking leg."
   },
   {
     "trick": "Cheat 720",
     "count": 12,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/720.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/720.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/720.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/720.gif",
     "caption": "A cheat vert kick that takes off in (roughly) backside stance, spins 360° and finishes with an outside (hook or crescent) at the target."
   },
   {
     "trick": "Sideswipe",
     "count": 11,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/sideswipe.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/sideswipe.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/sideswipe.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/sideswipe.gif",
     "caption": "An inverted 540."
   },
   {
     "trick": "Double Full Twist",
     "count": 11,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/dubfull.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/dubfull.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/dubfull.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/dubfull.gif",
     "caption": "A full twist with two spins."
   },
   {
     "trick": "Raiz",
     "count": 11,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/aerial_ct_raiz.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/aerial_ct_raiz.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/aerial_ct_raiz.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/aerial_ct_raiz.gif",
     "caption": "The Raiz can be thought of as a 'no-handed' gumbi or an inverted tornado. "
   },
   {
     "trick": "Double B-Twist",
     "count": 8,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/doublebtwist.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/doublebtwist.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/doublebtwist.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/doublebtwist.gif",
     "caption": "A butterfly twist with two twists."
   },
   {
     "trick": "Gainer Switch",
     "count": 8,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/gswitch.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/gswitch.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/gswitch.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/gswitch.gif",
     "caption": "A gainer flash that switches legs and lands on the plant leg again."
   },
   {
     "trick": "Jackknife",
     "count": 8,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/jackknife.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/jackknife.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/jackknife.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/jackknife.gif",
     "caption": "A cheat 720 with a round kick executed before the hook kick."
   },
   {
     "trick": "Snapuswipe",
     "count": 8,
-    "vidUrl": "https://s3.amazonaws.com/tricking-survey-gifs/snapuswipe.mp4",
-    "imgUrl": "https://s3.amazonaws.com/tricking-survey-gifs/snapuswipe.gif",
+    "vidUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/snapuswipe.mp4",
+    "imgUrl": "https://trickstats-gifs.s3.us-east-2.amazonaws.com/snapuswipe.gif",
     "caption": "A sideswipe with an extra twist before landing."
   }
 ]

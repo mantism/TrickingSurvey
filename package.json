@@ -31,7 +31,8 @@
   },
   "devDependencies": {
     "lodash": "^4.17.4",
-    "node-sass-chokidar": "0.0.3"
+    "node-sass-chokidar": "0.0.3",
+    "react-router-dom": "^4.2.2"
   },
   "repository": {
     "type": "git",
