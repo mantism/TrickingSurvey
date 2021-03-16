@@ -4,8 +4,8 @@ import Image from './Image';
 
 class Highlights extends Component {
   render() {
-    const corkURL = "https://s3.amazonaws.com/tricking-survey-gifs/cork.gif";
-    const aerialRaizURL ="https://s3.amazonaws.com/tricking-survey-gifs/aerial_ct_raiz.gif";
+    const corkURL = "https://trickstats-gifs.s3.us-east-2.amazonaws.com/cork.gif";
+    const aerialRaizURL ="https://trickstats-gifs.s3.us-east-2.amazonaws.com/aerial_ct_raiz.gif";
 
     return (
 			<div className="Highlights" id="Highlights">

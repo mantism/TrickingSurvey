@@ -23,7 +23,7 @@ class Image extends Component {
 }
 
 Image.defaultProps = {
-  url: 'https://s3.amazonaws.com/tricking-survey-gifs/cork.gif',
+  url: 'https://trickstats-gifs.s3.us-east-2.amazonaws.com/cork.gif',
   size: 'large',
 }
 
