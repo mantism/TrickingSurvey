@@ -1,18 +1,21 @@
 {
-  "main.css": "static/css/main.018d102f.css",
-  "main.css.map": "static/css/main.018d102f.css.map",
-  "main.js": "static/js/main.96498446.js",
-  "main.js.map": "static/js/main.96498446.js.map",
-  "static/media/calendar32.svg": "static/media/calendar32.9c694cf8.svg",
-  "static/media/calendar64.svg": "static/media/calendar64.98a3261d.svg",
-  "static/media/gainer-sprite32.svg": "static/media/gainer-sprite32.1cd3a048.svg",
-  "static/media/gainer-sprite64.svg": "static/media/gainer-sprite64.47272ec6.svg",
-  "static/media/kick.svg": "static/media/kick.95838627.svg",
-  "static/media/kick32.svg": "static/media/kick32.c2d9ead7.svg",
-  "static/media/nodes32.svg": "static/media/nodes32.d5cb3348.svg",
-  "static/media/nodes64.svg": "static/media/nodes64.cf0bd28b.svg",
-  "static/media/piechart32.svg": "static/media/piechart32.dc07ec80.svg",
-  "static/media/piechart64.svg": "static/media/piechart64.82bef33b.svg",
-  "static/media/wheel32.svg": "static/media/wheel32.2d464733.svg",
-  "static/media/wheel64.svg": "static/media/wheel64.6630147e.svg"
+  "files": {
+    "main.css": "/static/css/main.98089f02.chunk.css",
+    "main.js": "/static/js/main.5c641ae6.chunk.js",
+    "main.js.map": "/static/js/main.5c641ae6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a62a9fc8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a62a9fc8.js.map",
+    "static/js/2.3ba6d7d8.chunk.js": "/static/js/2.3ba6d7d8.chunk.js",
+    "static/js/2.3ba6d7d8.chunk.js.map": "/static/js/2.3ba6d7d8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.98089f02.chunk.css.map": "/static/css/main.98089f02.chunk.css.map",
+    "static/js/2.3ba6d7d8.chunk.js.LICENSE.txt": "/static/js/2.3ba6d7d8.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/static/media/wheel64.b293d4b5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a62a9fc8.js",
+    "static/js/2.3ba6d7d8.chunk.js",
+    "static/css/main.98089f02.chunk.css",
+    "static/js/main.5c641ae6.chunk.js"
+  ]
 }
